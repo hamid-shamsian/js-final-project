@@ -8,6 +8,7 @@ const navigateTo = e => {
 const routes = {
   "/": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
   "/index.html": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
+  "/login": { fileName: "login", title: "Shoea | Login" },
   "/products": { fileName: "products", title: "Shoea | Products" },
   404: { fileName: "404", title: "Shoea | Page Not Found!" }
 };

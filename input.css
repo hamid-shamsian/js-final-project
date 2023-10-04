@@ -11,3 +11,7 @@
 #onboarding-2 div {
   background-image: linear-gradient(0, #000c, #0000);
 }
+
+button[disabled] {
+  opacity: 0.6;
+}
