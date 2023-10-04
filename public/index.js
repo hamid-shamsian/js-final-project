@@ -23,7 +23,7 @@ const renderPage = async () => {
   const html = await page.text();
   document.getElementById("root").innerHTML = html;
 
-  const module = await import(`./js/${fileName}.js`);
+  const module = await import(`./js/pages/${fileName}.js`);
   module.init?.(); // invoke init function if it exists in the module :)
 };
 
