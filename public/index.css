@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap");
 
+@import url("https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css");
+
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -607,6 +609,10 @@ video {
   margin-bottom: 3.5rem;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -615,20 +621,12 @@ video {
   margin-top: 10rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
-}
-
 .mt-52{
   margin-top: 13rem;
 }
 
-.mt-48{
-  margin-top: 12rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
+.mt-8{
+  margin-top: 2rem;
 }
 
 .flex{
