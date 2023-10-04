@@ -1,0 +1,14 @@
+{
+  "name": "js-final-project",
+  "version": "1.0.0",
+  "description": "Maktab-99 JavaScript Final Project.",
+  "main": "index.js",
+  "scripts": {
+    "css": "npx tailwindcss -i ./input.css -o ./public/index.css --watch"
+  },
+  "author": "Hamid Shamsian",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
