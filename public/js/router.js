@@ -16,7 +16,7 @@ export const navigateTo = async input => {
 };
 
 const renderApp = async () => {
-  spinner.classList.remove("hidden");
+  spinner.style.display = "";
 
   const path = window.location.pathname;
   const { fileName, title, hasJS } = routes[path] ?? routes[404];
@@ -32,7 +32,7 @@ const renderApp = async () => {
       setTimeout(() => module.init?.(), 0); // invoke init function if it exists in the module (schedule to invoke it immediately after completion of returning html and parsing it to DOM)
     }
 
-    spinner.classList.add("hidden");
+    spinner.style.display = "none";
 
     return html;
   } catch (err) {
