@@ -1,11 +1,11 @@
 import showToast from "./utils/toast.js";
 
 const routes = {
-  "/": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
-  "/index.html": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
-  "/login": { fileName: "login", title: "Shoea | Login" },
-  "/products": { fileName: "products", title: "Shoea | Products" },
-  404: { fileName: "404", title: "Shoea | Page Not Found!" }
+  "/": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!", hasJS: true },
+  "/index.html": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!", hasJS: true },
+  "/login": { fileName: "login", title: "Shoea | Login", hasJS: true },
+  "/products": { fileName: "products", title: "Shoea | Products", hasJS: true },
+  404: { fileName: "404", title: "Shoea | Page Not Found!", hasJS: false }
 };
 const spinner = document.getElementById("spinner");
 
@@ -19,7 +19,7 @@ const renderApp = async () => {
   spinner.classList.remove("hidden");
 
   const path = window.location.pathname;
-  const { fileName, title } = routes[path] ?? routes[404];
+  const { fileName, title, hasJS } = routes[path] ?? routes[404];
 
   document.title = title;
 
@@ -27,14 +27,16 @@ const renderApp = async () => {
     const page = await fetch(`../templates/${fileName}.html`);
     const html = await page.text();
 
-    const module = await import(`./pages/${fileName}.js`);
-    setTimeout(() => module.init?.(), 0); // invoke init function if it exists in the module (schedule to invoke it immediately after completion of returning html and parsing it to DOM)
+    if (hasJS) {
+      const module = await import(`./pages/${fileName}.js`);
+      setTimeout(() => module.init?.(), 0); // invoke init function if it exists in the module (schedule to invoke it immediately after completion of returning html and parsing it to DOM)
+    }
 
     spinner.classList.add("hidden");
 
     return html;
   } catch (err) {
-    showToast("An Unexpected Error occured.\n(usually Connection Error)\nTry refreshing the page.", "red");
+    showToast(" An Unexpected Error occured. \n(usually Connection Error)\nTry refreshing the page.", "red");
   }
 };
 
