@@ -4,7 +4,7 @@ export default function showToast(text, color) {
   toastifyJs({
     text,
     duration: 3000,
-    className: "rounded-full",
+    className: "rounded-full text-center",
     // close: true,
     gravity: "top",
     position: "center",
