@@ -40,6 +40,7 @@ const renderApp = async () => {
   }
 };
 
-window.onpopstate = renderApp; // to make Back and Forward buttons of the browser still working...
+// to make Back and Forward buttons of the browser still working...
+window.onpopstate = async () => (document.getElementById("root").innerHTML = await renderApp());
 
 export default renderApp;
