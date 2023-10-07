@@ -1,3 +1,5 @@
+import { navigateTo } from "../router.js";
+
 export function init() {
   const onboarding1 = document.querySelector("#onboarding-1");
   const onboarding2 = document.getElementById("onboarding-2");
@@ -40,6 +42,7 @@ export function init() {
 
       if (this.dataset.slide == 3) {
         this.textContent = "Get Started";
+        this.addEventListener("click", () => navigateTo("/login"));
       }
     }
   });

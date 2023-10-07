@@ -1,3 +1,4 @@
+import User from "./services/userService.js";
 import showToast from "./utils/toast.js";
 
 const routes = {
@@ -20,6 +21,16 @@ const RenderApp = async () => {
 
   const path = window.location.pathname;
   const { fileName, title, hasJS } = routes[path] ?? routes[404];
+
+  if (User.get()) {
+    switch (fileName) {
+      case "onboarding":
+        return navigateTo("/products");
+      case "login":
+        showToast("You are already Signed in!");
+        return navigateTo("/products");
+    }
+  }
 
   document.title = title;
 

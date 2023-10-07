@@ -24,8 +24,8 @@
     },
     {
       "id": "1",
-      "email": "hamid64bits@gmail.com",
-      "password": "1234567",
+      "email": "hamid@gmail.com",
+      "password": "1234",
       "addresses": [
         {
           "title": "address 1",
