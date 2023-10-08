@@ -8,10 +8,11 @@ export default async function http(method, resource, body) {
       headers: { "Content-Type": "application/json" },
       body: body ? JSON.stringify(body) : undefined
     });
-    if (res.status === 404) return showToast("Resource Not Found!");
+    if (res.status === 404) return showToast("Resource Not Found!", "red");
     if (!res.ok) throw new Error(res.status);
     return await res.json();
   } catch (err) {
-    throw err;
+    if (err.message == "Failed to fetch") showToast("Connection Error!", "red");
+    else throw err;
   }
 }

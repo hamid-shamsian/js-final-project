@@ -1,12 +1,6 @@
 import http from "./httpService.js";
 
-async function getUser(email) {
-  try {
-    return http("get", `users?email=${email}`);
-  } catch (err) {
-    null;
-  }
-}
+const getUser = email => http("get", `users?email=${email}`);
 
 // returns user object if the user with given username and password is authenticated: (otherwise returns undefined or false)
 export async function authUser(username, password) {
