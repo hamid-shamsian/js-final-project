@@ -4,14 +4,16 @@
       "id": "1",
       "email": "hamid64bits@gmail.com",
       "password": "1234567",
+      "fullName": "Hamid Shamsian",
+      "avatarURL": "../images/user-1.jpg",
       "addresses": [
         {
-          "title": "address 1",
-          "details": "no2, street9, square..., city..., state..."
+          "title": "home",
+          "details": "no2, street9, square1, tehran, iran"
         },
         {
-          "title": "address 2",
-          "details": "no2, street9, square..., city..., state..."
+          "title": "work",
+          "details": "no17, street4, square2, tehran, iran"
         },
         {
           "title": "address 3",
@@ -23,9 +25,11 @@
       "wishlist": []
     },
     {
-      "id": "1",
-      "email": "hamid@gmail.com",
+      "id": "2",
+      "email": "john.doe@yahoo.com",
       "password": "1234",
+      "fullName": "John Doe",
+      "avatarURL": "../images/user-2.jpg",
       "addresses": [
         {
           "title": "address 1",
@@ -45,9 +49,11 @@
       "wishlist": []
     },
     {
-      "id": "1",
-      "email": "hamid64bits@gmail.com",
-      "password": "1234567",
+      "id": "3",
+      "email": "hossein@gmail.com",
+      "password": "4321",
+      "fullName": "Hossein",
+      "avatarURL": "../images/user-3.jpg",
       "addresses": [
         {
           "title": "address 1",
@@ -68,1441 +74,3205 @@
     }
   ],
   "brands": [
-    [
-      {
-        "title": "title 1",
-        "id": "1"
-      },
-      {
-        "title": "title 2",
-        "id": "2"
-      },
-      {
-        "title": "title 3",
-        "id": "3"
-      },
-      {
-        "title": "title 4",
-        "id": "4"
-      },
-      {
-        "title": "title 5",
-        "id": "5"
-      },
-      {
-        "title": "title 6",
-        "id": "6"
-      },
-      {
-        "title": "title 7",
-        "id": "7"
-      },
-      {
-        "title": "title 8",
-        "id": "8"
-      }
-    ]
+    {
+      "id": "1",
+      "title": "Nike",
+      "slug": "nike"
+    },
+    {
+      "id": "2",
+      "title": "Adidas",
+      "slug": "adidas"
+    },
+    {
+      "id": "3",
+      "title": "Puma",
+      "slug": "puma"
+    },
+    {
+      "id": "4",
+      "title": "Asics",
+      "slug": "asics"
+    },
+    {
+      "id": "5",
+      "title": "Reebok",
+      "slug": "reebok"
+    },
+    {
+      "id": "6",
+      "title": "Converse",
+      "slug": "converse"
+    },
+    {
+      "id": "7",
+      "title": "New Balance",
+      "slug": "new-balance"
+    },
+    {
+      "id": "8",
+      "title": "Melli",
+      "slug": "melli"
+    }
   ],
   "shoes": [
     {
       "title": "Licensed Plastic Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/6.jpg",
+        "./images/brands/1/14.jpg",
+        "./images/brands/1/4.jpg",
+        "./images/brands/1/10.jpg",
+        "./images/brands/1/3.jpg",
+        "./images/brands/1/2.jpg",
+        "./images/brands/1/8.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
+      "colors": [
+        "Aqua",
+        "Navy",
+        "Gray"
+      ],
       "inStock": 54,
       "soldOut": 79,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 57,
+      "ratings": "3.34",
       "reviews": 66,
       "price": "245.00",
       "id": "1",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Refined Plastic Computer",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/10.jpg",
+        "./images/brands/2/1.jpg",
+        "./images/brands/2/7.jpg",
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/13.jpg",
+        "./images/brands/2/8.jpg",
+        "./images/brands/2/5.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Aqua",
+        "Gray",
+        "Olive",
+        "Teal",
+        "Purple"
+      ],
       "inStock": 12,
       "soldOut": 13,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 2,
+      "ratings": "3.95",
       "reviews": 10,
       "price": "312.00",
       "id": "2",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Handmade Rubber Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/11.jpg",
+        "./images/brands/3/12.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/6.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Green",
+        "Purple",
+        "Yellow",
+        "Maroon",
+        "Navy"
+      ],
       "inStock": 5,
       "soldOut": 9,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 43,
+      "ratings": "4.98",
       "reviews": 4,
       "price": "889.00",
       "id": "3",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Incredible Bronze Salad",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/3.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/1.jpg",
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/2.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Aqua",
+        "Blue",
+        "Navy"
+      ],
       "inStock": 35,
       "soldOut": 68,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 12,
+      "ratings": "4.31",
       "reviews": 29,
       "price": "920.00",
       "id": "4",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Awesome Soft Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/14.jpg",
+        "./images/brands/5/5.jpg",
+        "./images/brands/5/13.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/7.jpg",
+        "./images/brands/5/12.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Lime",
+        "Navy",
+        "Blue"
+      ],
       "inStock": 63,
       "soldOut": 77,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 49,
+      "ratings": "3.03",
       "reviews": 68,
       "price": "3.00",
       "id": "5",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Modern Steel Mouse",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/7.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/14.jpg",
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/4.jpg",
+        "./images/brands/6/10.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Silver",
+        "Maroon",
+        "Lime",
+        "Aqua",
+        "Blue"
+      ],
       "inStock": 9,
       "soldOut": 6,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 61,
+      "ratings": "2.37",
       "reviews": 18,
       "price": "17.00",
       "id": "6",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Unbranded Wooden Ball",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/14.jpg",
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/8.jpg",
+        "./images/brands/7/12.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/10.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Teal",
+        "Silver",
+        "Red"
+      ],
       "inStock": 75,
       "soldOut": 86,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 20,
+      "ratings": "4.76",
       "reviews": 63,
       "price": "424.00",
       "id": "7",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Rustic Cotton Chair",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/12.jpg",
+        "./images/brands/8/8.jpg",
+        "./images/brands/8/14.jpg",
+        "./images/brands/8/4.jpg",
+        "./images/brands/8/3.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/1.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "Lime",
+        "Black",
+        "White",
+        "Silver"
+      ],
       "inStock": 10,
       "soldOut": 61,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 62,
+      "ratings": "3.26",
       "reviews": 20,
       "price": "969.00",
       "id": "8",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Small Soft Mouse",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/13.jpg",
+        "./images/brands/1/11.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/2.jpg",
+        "./images/brands/1/6.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "Blue",
+        "Green",
+        "Teal",
+        "Black"
+      ],
       "inStock": 11,
       "soldOut": 29,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 62,
+      "ratings": "2.97",
       "reviews": 17,
       "price": "255.00",
       "id": "9",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Luxurious Soft Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/3.jpg",
+        "./images/brands/2/13.jpg",
+        "./images/brands/2/10.jpg",
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/9.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Navy",
+        "Black",
+        "Blue",
+        "Red",
+        "Silver"
+      ],
       "inStock": 56,
       "soldOut": 3,
       "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "ratings": 97,
+      "ratings": "2.14",
       "reviews": 69,
       "price": "91.00",
       "id": "10",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Luxurious Fresh Cheese",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/3.jpg",
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/2.jpg",
+        "./images/brands/3/8.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/11.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Navy",
+        "Lime",
+        "Purple",
+        "Silver"
+      ],
       "inStock": 46,
       "soldOut": 31,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 88,
+      "ratings": "4.55",
       "reviews": 50,
       "price": "708.00",
       "id": "11",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Unbranded Plastic Tuna",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/10.jpg",
+        "./images/brands/4/3.jpg",
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/12.jpg",
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/2.jpg",
+        "./images/brands/4/4.jpg",
+        "./images/brands/4/13.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Blue",
+        "Black",
+        "Purple",
+        "Silver",
+        "Olive"
+      ],
       "inStock": 7,
       "soldOut": 63,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 56,
+      "ratings": "3.13",
       "reviews": 4,
       "price": "140.00",
       "id": "12",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Refined Metal Mouse",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/5.jpg",
+        "./images/brands/5/14.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/13.jpg",
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/8.jpg",
+        "./images/brands/5/6.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Teal",
+        "Navy",
+        "Red",
+        "Black"
+      ],
       "inStock": 19,
       "soldOut": 28,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 47,
+      "ratings": "3.68",
       "reviews": 10,
       "price": "55.00",
       "id": "13",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Bespoke Frozen Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/14.jpg",
+        "./images/brands/6/4.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/5.jpg",
+        "./images/brands/6/8.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/3.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Maroon",
+        "Red",
+        "Olive",
+        "Gray"
+      ],
       "inStock": 18,
       "soldOut": 27,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 15,
+      "ratings": "3.60",
       "reviews": 49,
       "price": "999.00",
       "id": "14",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Practical Plastic Sausages",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/12.jpg",
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/5.jpg",
+        "./images/brands/7/14.jpg",
+        "./images/brands/7/6.jpg",
+        "./images/brands/7/2.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Yellow",
+        "Silver",
+        "Lime",
+        "White"
+      ],
       "inStock": 91,
       "soldOut": 69,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 14,
+      "ratings": "4.54",
       "reviews": 63,
       "price": "39.00",
       "id": "15",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Ergonomic Metal Table",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/14.jpg",
+        "./images/brands/8/12.jpg",
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/6.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/11.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Navy",
+        "Aqua",
+        "Olive",
+        "Black",
+        "Blue"
+      ],
       "inStock": 72,
       "soldOut": 97,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 94,
+      "ratings": "2.64",
       "reviews": 38,
       "price": "527.00",
       "id": "16",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Handmade Soft Ball",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/7.jpg",
+        "./images/brands/1/8.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/4.jpg",
+        "./images/brands/1/9.jpg",
+        "./images/brands/1/2.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Olive",
+        "Navy",
+        "Blue"
+      ],
       "inStock": 96,
       "soldOut": 1,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 4,
+      "ratings": "4.34",
       "reviews": 26,
       "price": "987.00",
       "id": "17",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Handmade Soft Shirt",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/14.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/8.jpg",
+        "./images/brands/2/1.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Navy",
+        "Blue",
+        "Green",
+        "Teal"
+      ],
       "inStock": 84,
       "soldOut": 12,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 14,
+      "ratings": "3.63",
       "reviews": 43,
       "price": "382.00",
       "id": "18",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Intelligent Cotton Computer",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/11.jpg",
+        "./images/brands/3/8.jpg",
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/4.jpg",
+        "./images/brands/3/3.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Teal",
+        "Yellow",
+        "Black",
+        "White",
+        "Olive"
+      ],
       "inStock": 14,
       "soldOut": 46,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 24,
+      "ratings": "2.26",
       "reviews": 5,
       "price": "955.00",
       "id": "19",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Unbranded Bronze Car",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/9.jpg",
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/7.jpg",
+        "./images/brands/4/6.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Red",
+        "Gray",
+        "Blue",
+        "Black"
+      ],
       "inStock": 64,
       "soldOut": 49,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 61,
+      "ratings": "2.36",
       "reviews": 22,
       "price": "618.00",
       "id": "20",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Rustic Cotton Computer",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/9.jpg",
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/8.jpg",
+        "./images/brands/5/13.jpg",
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/5.jpg",
+        "./images/brands/5/7.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Black",
+        "Yellow",
+        "Navy"
+      ],
       "inStock": 66,
       "soldOut": 44,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 44,
+      "ratings": "4.44",
       "reviews": 3,
       "price": "47.00",
       "id": "21",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Unbranded Rubber Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/11.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/1.jpg",
+        "./images/brands/6/4.jpg",
+        "./images/brands/6/5.jpg",
+        "./images/brands/6/3.jpg",
+        "./images/brands/6/13.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Purple",
+        "Teal",
+        "Black"
+      ],
       "inStock": 21,
       "soldOut": 31,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 55,
+      "ratings": "3.70",
       "reviews": 64,
       "price": "663.00",
       "id": "22",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Handcrafted Concrete Computer",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/9.jpg",
+        "./images/brands/7/10.jpg",
+        "./images/brands/7/5.jpg",
+        "./images/brands/7/8.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Red",
+        "Lime",
+        "Yellow",
+        "Purple"
+      ],
       "inStock": 75,
       "soldOut": 62,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 91,
+      "ratings": "2.61",
       "reviews": 75,
       "price": "902.00",
       "id": "23",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Incredible Steel Car",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/4.jpg",
+        "./images/brands/8/13.jpg",
+        "./images/brands/8/12.jpg",
+        "./images/brands/8/14.jpg",
+        "./images/brands/8/6.jpg",
+        "./images/brands/8/11.jpg",
+        "./images/brands/8/7.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "White",
+        "Teal",
+        "Silver"
+      ],
       "inStock": 55,
       "soldOut": 78,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 39,
+      "ratings": "3.15",
       "reviews": 13,
       "price": "667.00",
       "id": "24",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Bespoke Fresh Mouse",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/6.jpg",
+        "./images/brands/1/7.jpg",
+        "./images/brands/1/12.jpg",
+        "./images/brands/1/3.jpg",
+        "./images/brands/1/11.jpg",
+        "./images/brands/1/10.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "White",
+        "Purple",
+        "Yellow",
+        "Silver"
+      ],
       "inStock": 75,
       "soldOut": 23,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 10,
+      "ratings": "3.05",
       "reviews": 62,
       "price": "997.00",
       "id": "25",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Tasty Granite Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/7.jpg",
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/11.jpg",
+        "./images/brands/2/10.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "Blue",
+        "Navy",
+        "White",
+        "Red"
+      ],
       "inStock": 53,
       "soldOut": 85,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 50,
+      "ratings": "4.61",
       "reviews": 76,
       "price": "813.00",
       "id": "26",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Refined Frozen Chips",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/12.jpg",
+        "./images/brands/3/10.jpg",
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/2.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Gray",
+        "Red",
+        "Lime",
+        "Blue"
+      ],
       "inStock": 74,
       "soldOut": 59,
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "ratings": 84,
+      "ratings": "2.74",
       "reviews": 63,
       "price": "660.00",
       "id": "27",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Incredible Cotton Salad",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/1.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/6.jpg",
+        "./images/brands/4/12.jpg",
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/9.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Olive",
+        "Green",
+        "Maroon"
+      ],
       "inStock": 44,
       "soldOut": 51,
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "ratings": 35,
+      "ratings": "2.26",
       "reviews": 25,
       "price": "107.00",
       "id": "28",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Fantastic Fresh Soap",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/13.jpg",
+        "./images/brands/5/7.jpg",
+        "./images/brands/5/14.jpg",
+        "./images/brands/5/9.jpg",
+        "./images/brands/5/12.jpg",
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/4.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Aqua",
+        "Silver",
+        "Olive",
+        "Red"
+      ],
       "inStock": 38,
       "soldOut": 73,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 80,
+      "ratings": "2.11",
       "reviews": 80,
       "price": "552.00",
       "id": "29",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Awesome Fresh Keyboard",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/11.jpg",
+        "./images/brands/6/13.jpg",
+        "./images/brands/6/8.jpg",
+        "./images/brands/6/14.jpg",
+        "./images/brands/6/1.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Lime",
+        "Silver",
+        "Teal",
+        "Olive"
+      ],
       "inStock": 67,
       "soldOut": 19,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 97,
+      "ratings": "3.35",
       "reviews": 80,
       "price": "475.00",
       "id": "30",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Awesome Bronze Towels",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/10.jpg",
+        "./images/brands/7/6.jpg",
+        "./images/brands/7/9.jpg",
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/8.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/1.jpg",
+        "./images/brands/7/5.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "Purple",
+        "Gray",
+        "Aqua"
+      ],
       "inStock": 4,
       "soldOut": 49,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 94,
+      "ratings": "2.78",
       "reviews": 54,
       "price": "536.00",
       "id": "31",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Modern Bronze Chicken",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/13.jpg",
+        "./images/brands/8/4.jpg",
+        "./images/brands/8/6.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Red",
+        "Maroon",
+        "Silver",
+        "White"
+      ],
       "inStock": 97,
       "soldOut": 9,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 25,
+      "ratings": "3.78",
       "reviews": 57,
       "price": "21.00",
       "id": "32",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Handmade Cotton Tuna",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/3.jpg",
+        "./images/brands/1/8.jpg",
+        "./images/brands/1/14.jpg",
+        "./images/brands/1/9.jpg",
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/5.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Gray",
+        "Maroon"
+      ],
       "inStock": 55,
       "soldOut": 32,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 57,
+      "ratings": "4.75",
       "reviews": 19,
       "price": "633.00",
       "id": "33",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Practical Steel Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/11.jpg",
+        "./images/brands/2/4.jpg",
+        "./images/brands/2/10.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/3.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Maroon",
+        "Blue",
+        "Aqua",
+        "Silver"
+      ],
       "inStock": 10,
       "soldOut": 6,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 65,
+      "ratings": "2.39",
       "reviews": 50,
       "price": "892.00",
       "id": "34",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Modern Wooden Pants",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/6.jpg",
+        "./images/brands/3/3.jpg",
+        "./images/brands/3/8.jpg",
+        "./images/brands/3/9.jpg",
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/2.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/10.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Green",
+        "Red",
+        "Blue",
+        "Black",
+        "Yellow"
+      ],
       "inStock": 17,
       "soldOut": 76,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 85,
+      "ratings": "4.56",
       "reviews": 30,
       "price": "206.00",
       "id": "35",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Fantastic Frozen Salad",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/12.jpg",
+        "./images/brands/4/2.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/3.jpg",
+        "./images/brands/4/1.jpg",
+        "./images/brands/4/10.jpg",
+        "./images/brands/4/13.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Blue",
+        "Teal",
+        "Navy",
+        "Black"
+      ],
       "inStock": 62,
       "soldOut": 100,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 75,
+      "ratings": "3.90",
       "reviews": 55,
       "price": "799.00",
       "id": "36",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Incredible Bronze Towels",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/8.jpg",
+        "./images/brands/5/5.jpg",
+        "./images/brands/5/10.jpg",
+        "./images/brands/5/4.jpg",
+        "./images/brands/5/6.jpg",
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/13.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Purple",
+        "Red",
+        "Aqua"
+      ],
       "inStock": 52,
       "soldOut": 14,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 54,
+      "ratings": "2.58",
       "reviews": 49,
       "price": "443.00",
       "id": "37",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Intelligent Rubber Chair",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/8.jpg",
+        "./images/brands/6/14.jpg",
+        "./images/brands/6/11.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/1.jpg",
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/6.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Blue",
+        "Navy",
+        "White",
+        "Silver",
+        "Teal",
+        "Aqua"
+      ],
       "inStock": 85,
       "soldOut": 35,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 47,
+      "ratings": "4.22",
       "reviews": 29,
       "price": "546.00",
       "id": "38",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Refined Frozen Shirt",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/14.jpg",
+        "./images/brands/7/8.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/6.jpg",
+        "./images/brands/7/2.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Aqua",
+        "Maroon",
+        "Yellow"
+      ],
       "inStock": 61,
       "soldOut": 71,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 6,
+      "ratings": "2.16",
       "reviews": 3,
       "price": "906.00",
       "id": "39",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Unbranded Granite Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/8.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/3.jpg",
+        "./images/brands/8/4.jpg",
+        "./images/brands/8/11.jpg",
+        "./images/brands/8/13.jpg",
+        "./images/brands/8/10.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Red",
+        "Lime",
+        "Aqua",
+        "White"
+      ],
       "inStock": 69,
       "soldOut": 7,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 74,
+      "ratings": "4.89",
       "reviews": 48,
       "price": "713.00",
       "id": "40",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Licensed Rubber Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/7.jpg",
+        "./images/brands/1/3.jpg",
+        "./images/brands/1/2.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/13.jpg",
+        "./images/brands/1/9.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Aqua",
+        "Red",
+        "Maroon",
+        "Black",
+        "Yellow"
+      ],
       "inStock": 72,
       "soldOut": 95,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 47,
+      "ratings": "4.25",
       "reviews": 42,
       "price": "437.00",
       "id": "41",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Sleek Rubber Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/7.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/10.jpg",
+        "./images/brands/2/1.jpg",
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/3.jpg",
+        "./images/brands/2/8.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Red",
+        "Silver",
+        "Teal",
+        "Lime"
+      ],
       "inStock": 57,
       "soldOut": 27,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 18,
+      "ratings": "2.76",
       "reviews": 99,
       "price": "299.00",
       "id": "42",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Rustic Metal Car",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/2.jpg",
+        "./images/brands/3/10.jpg",
+        "./images/brands/3/4.jpg",
+        "./images/brands/3/8.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/7.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Teal",
+        "Silver",
+        "Green",
+        "Navy",
+        "Yellow"
+      ],
       "inStock": 52,
       "soldOut": 40,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 53,
+      "ratings": "2.82",
       "reviews": 63,
       "price": "39.00",
       "id": "43",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Luxurious Fresh Keyboard",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/9.jpg",
+        "./images/brands/4/4.jpg",
+        "./images/brands/4/7.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/1.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Silver",
+        "Maroon",
+        "Olive",
+        "Red",
+        "Green",
+        "Teal"
+      ],
       "inStock": 23,
       "soldOut": 71,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 5,
+      "ratings": "4.78",
       "reviews": 26,
       "price": "810.00",
       "id": "44",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Unbranded Plastic Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/3.jpg",
+        "./images/brands/5/8.jpg",
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/13.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/12.jpg",
+        "./images/brands/5/5.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Purple",
+        "Gray",
+        "Navy"
+      ],
       "inStock": 46,
       "soldOut": 25,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 82,
+      "ratings": "4.84",
       "reviews": 9,
       "price": "145.00",
       "id": "45",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Refined Concrete Computer",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/9.jpg",
+        "./images/brands/6/3.jpg",
+        "./images/brands/6/14.jpg",
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/7.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/4.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Lime",
+        "Teal",
+        "Navy",
+        "Gray"
+      ],
       "inStock": 51,
       "soldOut": 65,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 76,
+      "ratings": "4.99",
       "reviews": 2,
       "price": "392.00",
       "id": "46",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Generic Steel Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/2.jpg",
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/1.jpg",
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/8.jpg",
+        "./images/brands/7/7.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "Teal",
+        "Gray",
+        "Aqua",
+        "Silver"
+      ],
       "inStock": 6,
       "soldOut": 31,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 41,
+      "ratings": "4.34",
       "reviews": 50,
       "price": "298.00",
       "id": "47",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Unbranded Wooden Salad",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/13.jpg",
+        "./images/brands/8/8.jpg",
+        "./images/brands/8/9.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Aqua",
+        "Black",
+        "Silver",
+        "Gray"
+      ],
       "inStock": 85,
       "soldOut": 76,
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "ratings": 43,
+      "ratings": "2.18",
       "reviews": 68,
       "price": "422.00",
       "id": "48",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Electronic Wooden Chicken",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/4.jpg",
+        "./images/brands/1/10.jpg",
+        "./images/brands/1/8.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/14.jpg",
+        "./images/brands/1/2.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Maroon",
+        "Teal",
+        "Black",
+        "Yellow",
+        "Blue"
+      ],
       "inStock": 42,
       "soldOut": 55,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 43,
+      "ratings": "4.05",
       "reviews": 1,
       "price": "518.00",
       "id": "49",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Modern Wooden Sausages",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/10.jpg",
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/4.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/7.jpg",
+        "./images/brands/2/1.jpg",
+        "./images/brands/2/9.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Lime",
+        "Green",
+        "Gray",
+        "Teal",
+        "Navy"
+      ],
       "inStock": 0,
       "soldOut": 30,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 26,
+      "ratings": "4.02",
       "reviews": 16,
       "price": "75.00",
       "id": "50",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Gorgeous Cotton Cheese",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/3.jpg",
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/2.jpg",
+        "./images/brands/3/4.jpg",
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/12.jpg",
+        "./images/brands/3/11.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Red",
+        "Green",
+        "Black",
+        "Silver",
+        "Lime",
+        "Olive"
+      ],
       "inStock": 31,
       "soldOut": 17,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 21,
+      "ratings": "4.85",
       "reviews": 22,
       "price": "611.00",
       "id": "51",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Ergonomic Steel Pants",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/7.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/6.jpg",
+        "./images/brands/4/3.jpg",
+        "./images/brands/4/12.jpg",
+        "./images/brands/4/10.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Maroon",
+        "Black",
+        "Blue",
+        "Purple",
+        "Green"
+      ],
       "inStock": 83,
       "soldOut": 57,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 47,
+      "ratings": "3.86",
       "reviews": 1,
       "price": "846.00",
       "id": "52",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Generic Soft Fish",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/5.jpg",
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/6.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/10.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Navy",
+        "Yellow",
+        "Red",
+        "Gray"
+      ],
       "inStock": 27,
       "soldOut": 36,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 53,
+      "ratings": "4.77",
       "reviews": 70,
       "price": "258.00",
       "id": "53",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Licensed Steel Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/8.jpg",
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/10.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/14.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/7.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "White",
+        "Aqua",
+        "Gray",
+        "Red",
+        "Teal",
+        "Silver"
+      ],
       "inStock": 72,
       "soldOut": 87,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 40,
+      "ratings": "3.83",
       "reviews": 34,
       "price": "875.00",
       "id": "54",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Elegant Metal Fish",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/5.jpg",
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/12.jpg",
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/7.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Green",
+        "Olive",
+        "Yellow",
+        "Red",
+        "Lime"
+      ],
       "inStock": 7,
       "soldOut": 2,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 38,
+      "ratings": "2.23",
       "reviews": 81,
       "price": "525.00",
       "id": "55",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Modern Bronze Ball",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/4.jpg",
+        "./images/brands/8/12.jpg",
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/11.jpg",
+        "./images/brands/8/14.jpg",
+        "./images/brands/8/13.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Navy",
+        "Green",
+        "White"
+      ],
       "inStock": 91,
       "soldOut": 73,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 62,
+      "ratings": "4.36",
       "reviews": 22,
       "price": "367.00",
       "id": "56",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Incredible Bronze Sausages",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/10.jpg",
+        "./images/brands/1/4.jpg",
+        "./images/brands/1/2.jpg",
+        "./images/brands/1/12.jpg",
+        "./images/brands/1/13.jpg",
+        "./images/brands/1/11.jpg",
+        "./images/brands/1/9.jpg",
+        "./images/brands/1/14.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Purple",
+        "Silver",
+        "Yellow",
+        "Green"
+      ],
       "inStock": 54,
       "soldOut": 83,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 52,
+      "ratings": "2.24",
       "reviews": 97,
       "price": "386.00",
       "id": "57",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Incredible Metal Fish",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/1.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/7.jpg",
+        "./images/brands/2/11.jpg",
+        "./images/brands/2/13.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Red",
+        "Navy",
+        "Maroon",
+        "Green",
+        "Purple",
+        "Lime"
+      ],
       "inStock": 18,
       "soldOut": 50,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 86,
+      "ratings": "3.57",
       "reviews": 98,
       "price": "526.00",
       "id": "58",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Recycled Wooden Sausages",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/10.jpg",
+        "./images/brands/3/8.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/9.jpg",
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/11.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Yellow",
+        "Teal",
+        "Olive",
+        "Purple"
+      ],
       "inStock": 60,
       "soldOut": 12,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 27,
+      "ratings": "4.31",
       "reviews": 50,
       "price": "447.00",
       "id": "59",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Refined Granite Soap",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/3.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/13.jpg",
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/12.jpg",
+        "./images/brands/4/4.jpg",
+        "./images/brands/4/6.jpg",
+        "./images/brands/4/8.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Olive",
+        "Green",
+        "Yellow",
+        "Purple",
+        "Maroon"
+      ],
       "inStock": 54,
       "soldOut": 30,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 87,
+      "ratings": "4.59",
       "reviews": 26,
       "price": "410.00",
       "id": "60",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Sleek Cotton Pants",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/12.jpg",
+        "./images/brands/5/14.jpg",
+        "./images/brands/5/3.jpg",
+        "./images/brands/5/13.jpg",
+        "./images/brands/5/10.jpg",
+        "./images/brands/5/4.jpg",
+        "./images/brands/5/8.jpg",
+        "./images/brands/5/7.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Teal",
+        "Yellow",
+        "Red",
+        "Aqua"
+      ],
       "inStock": 48,
       "soldOut": 14,
       "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "ratings": 40,
+      "ratings": "3.76",
       "reviews": 8,
       "price": "669.00",
       "id": "61",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Electronic Granite Chicken",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/11.jpg",
+        "./images/brands/6/3.jpg",
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/4.jpg",
+        "./images/brands/6/14.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Lime",
+        "Blue",
+        "Green",
+        "Black"
+      ],
       "inStock": 51,
       "soldOut": 2,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 69,
+      "ratings": "4.96",
       "reviews": 37,
       "price": "507.00",
       "id": "62",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Tasty Bronze Towels",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/12.jpg",
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/1.jpg",
+        "./images/brands/7/7.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Aqua",
+        "White",
+        "Green",
+        "Lime",
+        "Blue",
+        "Gray"
+      ],
       "inStock": 44,
       "soldOut": 81,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 92,
+      "ratings": "4.67",
       "reviews": 28,
       "price": "595.00",
       "id": "63",
-      "brandId": "7"
+      "brandId": 7
     },
     {
       "title": "Fantastic Soft Cheese",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/5.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/3.jpg",
+        "./images/brands/8/6.jpg",
+        "./images/brands/8/14.jpg",
+        "./images/brands/8/12.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Silver",
+        "Aqua",
+        "White",
+        "Navy",
+        "Olive",
+        "Yellow"
+      ],
       "inStock": 49,
       "soldOut": 20,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 54,
+      "ratings": "4.12",
       "reviews": 18,
       "price": "758.00",
       "id": "64",
-      "brandId": "8"
+      "brandId": 8
     },
     {
       "title": "Generic Granite Table",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/2.jpg",
+        "./images/brands/1/11.jpg",
+        "./images/brands/1/12.jpg",
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/6.jpg",
+        "./images/brands/1/7.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Olive",
+        "Teal",
+        "Navy"
+      ],
       "inStock": 74,
       "soldOut": 14,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 7,
+      "ratings": "4.31",
       "reviews": 60,
       "price": "153.00",
       "id": "65",
-      "brandId": "1"
+      "brandId": 1
     },
     {
       "title": "Handcrafted Cotton Fish",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/9.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/13.jpg",
+        "./images/brands/2/6.jpg",
+        "./images/brands/2/11.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Gray",
+        "Navy",
+        "Olive",
+        "Maroon",
+        "Blue"
+      ],
       "inStock": 36,
       "soldOut": 28,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 30,
+      "ratings": "4.31",
       "reviews": 75,
       "price": "573.00",
       "id": "66",
-      "brandId": "2"
+      "brandId": 2
     },
     {
       "title": "Intelligent Frozen Cheese",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/10.jpg",
+        "./images/brands/3/3.jpg",
+        "./images/brands/3/11.jpg",
+        "./images/brands/3/8.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Purple",
+        "Black",
+        "Blue"
+      ],
       "inStock": 41,
       "soldOut": 87,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 90,
+      "ratings": "2.27",
       "reviews": 5,
       "price": "423.00",
       "id": "67",
-      "brandId": "3"
+      "brandId": 3
     },
     {
       "title": "Bespoke Soft Chips",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/6.jpg",
+        "./images/brands/4/4.jpg",
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/10.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/12.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Blue",
+        "Maroon",
+        "Lime",
+        "Green"
+      ],
       "inStock": 80,
       "soldOut": 24,
       "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "ratings": 100,
+      "ratings": "4.45",
       "reviews": 97,
       "price": "714.00",
       "id": "68",
-      "brandId": "4"
+      "brandId": 4
     },
     {
       "title": "Generic Granite Sausages",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/7.jpg",
+        "./images/brands/5/6.jpg",
+        "./images/brands/5/10.jpg",
+        "./images/brands/5/12.jpg",
+        "./images/brands/5/3.jpg",
+        "./images/brands/5/14.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "White",
+        "Teal",
+        "Aqua",
+        "Gray",
+        "Purple",
+        "Silver"
+      ],
       "inStock": 93,
       "soldOut": 91,
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "ratings": 100,
+      "ratings": "4.97",
       "reviews": 20,
       "price": "301.00",
       "id": "69",
-      "brandId": "5"
+      "brandId": 5
     },
     {
       "title": "Handcrafted Granite Towels",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/11.jpg",
+        "./images/brands/6/10.jpg",
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/5.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/9.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Navy",
+        "Olive",
+        "Gray"
+      ],
       "inStock": 44,
       "soldOut": 48,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 93,
+      "ratings": "3.05",
       "reviews": 18,
       "price": "284.00",
       "id": "70",
-      "brandId": "6"
+      "brandId": 6
     },
     {
       "title": "Generic Cotton Pants",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/13.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/9.jpg",
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/8.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Silver",
+        "Navy",
+        "Green"
+      ],
       "inStock": 40,
       "soldOut": 67,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 34,
+      "ratings": "4.25",
       "reviews": 67,
       "price": "819.00",
       "id": "71",
-      "brandId": "1"
+      "brandId": 7
     },
     {
       "title": "Unbranded Frozen Pants",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/11.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/14.jpg",
+        "./images/brands/8/13.jpg",
+        "./images/brands/8/3.jpg",
+        "./images/brands/8/12.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Red",
+        "Aqua",
+        "Navy"
+      ],
       "inStock": 77,
       "soldOut": 27,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 5,
+      "ratings": "4.89",
       "reviews": 79,
       "price": "40.00",
       "id": "72",
-      "brandId": "2"
+      "brandId": 8
     },
     {
       "title": "Intelligent Plastic Salad",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/14.jpg",
+        "./images/brands/1/10.jpg",
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/9.jpg",
+        "./images/brands/1/6.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Maroon",
+        "Red",
+        "Aqua",
+        "Black"
+      ],
       "inStock": 99,
       "soldOut": 71,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 37,
+      "ratings": "3.03",
       "reviews": 68,
       "price": "885.00",
       "id": "73",
-      "brandId": "3"
+      "brandId": 1
     },
     {
       "title": "Practical Soft Keyboard",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/10.jpg",
+        "./images/brands/2/6.jpg",
+        "./images/brands/2/9.jpg",
+        "./images/brands/2/1.jpg",
+        "./images/brands/2/12.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Blue",
+        "Red",
+        "Lime",
+        "Green"
+      ],
       "inStock": 74,
       "soldOut": 68,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 28,
+      "ratings": "3.56",
       "reviews": 52,
       "price": "427.00",
       "id": "74",
-      "brandId": "4"
+      "brandId": 2
     },
     {
       "title": "Bespoke Bronze Ball",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/9.jpg",
+        "./images/brands/3/10.jpg",
+        "./images/brands/3/14.jpg",
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/1.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "Aqua",
+        "Red"
+      ],
       "inStock": 95,
       "soldOut": 63,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 26,
+      "ratings": "3.83",
       "reviews": 88,
       "price": "744.00",
       "id": "75",
-      "brandId": "5"
+      "brandId": 3
     },
     {
       "title": "Handmade Cotton Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/1.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/10.jpg",
+        "./images/brands/4/13.jpg",
+        "./images/brands/4/2.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Blue",
+        "Maroon",
+        "Olive"
+      ],
       "inStock": 12,
       "soldOut": 15,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 6,
+      "ratings": "2.72",
       "reviews": 4,
       "price": "650.00",
       "id": "76",
-      "brandId": "6"
+      "brandId": 4
     },
     {
       "title": "Awesome Soft Soap",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/9.jpg",
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/8.jpg",
+        "./images/brands/5/7.jpg",
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/10.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Lime",
+        "Yellow",
+        "Olive",
+        "Red"
+      ],
       "inStock": 45,
       "soldOut": 35,
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "ratings": 19,
+      "ratings": "2.25",
       "reviews": 8,
       "price": "447.00",
       "id": "77",
-      "brandId": "7"
+      "brandId": 5
     },
     {
       "title": "Incredible Steel Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/2.jpg",
+        "./images/brands/6/13.jpg",
+        "./images/brands/6/5.jpg",
+        "./images/brands/6/4.jpg",
+        "./images/brands/6/6.jpg",
+        "./images/brands/6/10.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Aqua",
+        "Gray",
+        "Maroon",
+        "Silver",
+        "Lime",
+        "Red"
+      ],
       "inStock": 33,
       "soldOut": 27,
       "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "ratings": 5,
+      "ratings": "3.66",
       "reviews": 52,
       "price": "448.00",
       "id": "78",
-      "brandId": "8"
+      "brandId": 6
     },
     {
       "title": "Ergonomic Bronze Cheese",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/12.jpg",
+        "./images/brands/7/4.jpg",
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/1.jpg",
+        "./images/brands/7/10.jpg",
+        "./images/brands/7/6.jpg",
+        "./images/brands/7/9.jpg",
+        "./images/brands/7/13.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Lime",
+        "Olive",
+        "Teal"
+      ],
       "inStock": 15,
       "soldOut": 53,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 32,
+      "ratings": "4.07",
       "reviews": 46,
       "price": "388.00",
       "id": "79",
-      "brandId": "1"
+      "brandId": 7
     },
     {
       "title": "Refined Cotton Chips",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/1.jpg",
+        "./images/brands/8/4.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Red",
+        "Maroon",
+        "Teal"
+      ],
       "inStock": 34,
       "soldOut": 26,
       "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "ratings": 32,
+      "ratings": "2.89",
       "reviews": 58,
       "price": "157.00",
       "id": "80",
-      "brandId": "2"
+      "brandId": 8
     },
     {
       "title": "Electronic Bronze Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/11.jpg",
+        "./images/brands/1/8.jpg",
+        "./images/brands/1/13.jpg",
+        "./images/brands/1/14.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/2.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Navy",
+        "Yellow",
+        "Olive"
+      ],
       "inStock": 45,
       "soldOut": 87,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 95,
+      "ratings": "2.33",
       "reviews": 21,
       "price": "793.00",
       "id": "81",
-      "brandId": "3"
+      "brandId": 1
     },
     {
       "title": "Handmade Fresh Towels",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/6.jpg",
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/11.jpg",
+        "./images/brands/2/4.jpg",
+        "./images/brands/2/8.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Purple",
+        "Green",
+        "Blue",
+        "Olive",
+        "Yellow",
+        "Aqua"
+      ],
       "inStock": 49,
       "soldOut": 1,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 84,
+      "ratings": "2.81",
       "reviews": 13,
       "price": "42.00",
       "id": "82",
-      "brandId": "4"
+      "brandId": 2
     },
     {
       "title": "Handmade Fresh Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/9.jpg",
+        "./images/brands/3/6.jpg",
+        "./images/brands/3/13.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Teal",
+        "Aqua",
+        "Silver",
+        "Black",
+        "Olive",
+        "Maroon"
+      ],
       "inStock": 64,
       "soldOut": 44,
       "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "ratings": 72,
+      "ratings": "3.27",
       "reviews": 94,
       "price": "508.00",
       "id": "83",
-      "brandId": "5"
+      "brandId": 3
     },
     {
       "title": "Handcrafted Frozen Chips",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/12.jpg",
+        "./images/brands/4/7.jpg",
+        "./images/brands/4/4.jpg",
+        "./images/brands/4/10.jpg",
+        "./images/brands/4/1.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/5.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "White",
+        "Yellow",
+        "Aqua",
+        "Olive"
+      ],
       "inStock": 93,
       "soldOut": 81,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 90,
+      "ratings": "3.93",
       "reviews": 79,
       "price": "896.00",
       "id": "84",
-      "brandId": "6"
+      "brandId": 4
     },
     {
       "title": "Gorgeous Cotton Soap",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/1.jpg",
+        "./images/brands/5/3.jpg",
+        "./images/brands/5/5.jpg",
+        "./images/brands/5/14.jpg",
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/11.jpg",
+        "./images/brands/5/10.jpg",
+        "./images/brands/5/8.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Gray",
+        "Lime"
+      ],
       "inStock": 54,
       "soldOut": 63,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 7,
+      "ratings": "4.82",
       "reviews": 30,
       "price": "429.00",
       "id": "85",
-      "brandId": "7"
+      "brandId": 5
     },
     {
       "title": "Recycled Cotton Tuna",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/9.jpg",
+        "./images/brands/6/10.jpg",
+        "./images/brands/6/4.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/1.jpg",
+        "./images/brands/6/13.jpg",
+        "./images/brands/6/5.jpg",
+        "./images/brands/6/11.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Green",
+        "Purple",
+        "Teal",
+        "White",
+        "Gray"
+      ],
       "inStock": 87,
       "soldOut": 72,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 23,
+      "ratings": "2.46",
       "reviews": 15,
       "price": "980.00",
       "id": "86",
-      "brandId": "8"
+      "brandId": 6
     },
     {
       "title": "Incredible Soft Pizza",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/1.jpg",
+        "./images/brands/7/9.jpg",
+        "./images/brands/7/10.jpg",
+        "./images/brands/7/11.jpg",
+        "./images/brands/7/12.jpg",
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/7.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Purple",
+        "Gray",
+        "Green",
+        "Teal",
+        "Yellow"
+      ],
       "inStock": 39,
       "soldOut": 49,
       "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "ratings": 5,
+      "ratings": "4.25",
       "reviews": 11,
       "price": "571.00",
       "id": "87",
-      "brandId": "1"
+      "brandId": 7
     },
     {
       "title": "Bespoke Metal Car",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/8.jpg",
+        "./images/brands/8/2.jpg",
+        "./images/brands/8/10.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/3.jpg",
+        "./images/brands/8/6.jpg",
+        "./images/brands/8/1.jpg",
+        "./images/brands/8/5.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Black",
+        "Teal",
+        "White",
+        "Silver",
+        "Maroon",
+        "Navy"
+      ],
       "inStock": 27,
       "soldOut": 24,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 7,
+      "ratings": "2.35",
       "reviews": 61,
       "price": "782.00",
       "id": "88",
-      "brandId": "2"
+      "brandId": 8
     },
     {
       "title": "Luxurious Plastic Salad",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/7.jpg",
+        "./images/brands/1/13.jpg",
+        "./images/brands/1/14.jpg",
+        "./images/brands/1/1.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/11.jpg",
+        "./images/brands/1/10.jpg",
+        "./images/brands/1/3.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Maroon",
+        "Aqua",
+        "Black",
+        "Teal"
+      ],
       "inStock": 77,
       "soldOut": 18,
       "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "ratings": 49,
+      "ratings": "3.91",
       "reviews": 89,
       "price": "763.00",
       "id": "89",
-      "brandId": "3"
+      "brandId": 1
     },
     {
       "title": "Recycled Concrete Table",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/11.jpg",
+        "./images/brands/2/6.jpg",
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/12.jpg",
+        "./images/brands/2/5.jpg",
+        "./images/brands/2/7.jpg",
+        "./images/brands/2/8.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Aqua",
+        "White",
+        "Teal",
+        "Red",
+        "Purple"
+      ],
       "inStock": 71,
       "soldOut": 15,
       "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "ratings": 56,
+      "ratings": "3.42",
       "reviews": 34,
       "price": "518.00",
       "id": "90",
-      "brandId": "4"
+      "brandId": 2
     },
     {
       "title": "Sleek Soft Mouse",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/9.jpg",
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/7.jpg",
+        "./images/brands/3/14.jpg",
+        "./images/brands/3/8.jpg",
+        "./images/brands/3/4.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Maroon",
+        "Navy",
+        "Aqua",
+        "Teal",
+        "Purple"
+      ],
       "inStock": 79,
       "soldOut": 49,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 85,
+      "ratings": "2.08",
       "reviews": 84,
       "price": "30.00",
       "id": "91",
-      "brandId": "5"
+      "brandId": 3
     },
     {
       "title": "Incredible Metal Keyboard",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/10.jpg",
+        "./images/brands/4/13.jpg",
+        "./images/brands/4/8.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/9.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Silver",
+        "Yellow",
+        "Teal",
+        "White"
+      ],
       "inStock": 21,
       "soldOut": 75,
       "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "ratings": 89,
+      "ratings": "3.79",
       "reviews": 97,
       "price": "986.00",
       "id": "92",
-      "brandId": "6"
+      "brandId": 4
     },
     {
       "title": "Practical Soft Tuna",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/5/10.jpg",
+        "./images/brands/5/7.jpg",
+        "./images/brands/5/6.jpg",
+        "./images/brands/5/3.jpg",
+        "./images/brands/5/9.jpg",
+        "./images/brands/5/12.jpg",
+        "./images/brands/5/2.jpg",
+        "./images/brands/5/14.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Blue",
+        "Lime",
+        "Gray",
+        "Red",
+        "Teal",
+        "Navy"
+      ],
       "inStock": 57,
       "soldOut": 40,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 15,
+      "ratings": "4.38",
       "reviews": 13,
       "price": "781.00",
       "id": "93",
-      "brandId": "7"
+      "brandId": 5
     },
     {
       "title": "Handmade Bronze Bacon",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/6/11.jpg",
+        "./images/brands/6/8.jpg",
+        "./images/brands/6/10.jpg",
+        "./images/brands/6/12.jpg",
+        "./images/brands/6/5.jpg",
+        "./images/brands/6/4.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Maroon",
+        "Red",
+        "Navy",
+        "Black"
+      ],
       "inStock": 49,
       "soldOut": 94,
       "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "ratings": 6,
+      "ratings": "2.57",
       "reviews": 89,
       "price": "964.00",
       "id": "94",
-      "brandId": "8"
+      "brandId": 6
     },
     {
       "title": "Generic Soft Gloves",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/7/6.jpg",
+        "./images/brands/7/2.jpg",
+        "./images/brands/7/5.jpg",
+        "./images/brands/7/1.jpg",
+        "./images/brands/7/7.jpg",
+        "./images/brands/7/3.jpg",
+        "./images/brands/7/4.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Yellow",
+        "White",
+        "Purple",
+        "Lime"
+      ],
       "inStock": 35,
       "soldOut": 21,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 2,
+      "ratings": "3.49",
       "reviews": 61,
       "price": "896.00",
       "id": "95",
-      "brandId": "1"
+      "brandId": 7
     },
     {
       "title": "Incredible Rubber Tuna",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/8/3.jpg",
+        "./images/brands/8/13.jpg",
+        "./images/brands/8/9.jpg",
+        "./images/brands/8/12.jpg",
+        "./images/brands/8/7.jpg",
+        "./images/brands/8/4.jpg"
+      ],
+      "sizes": [
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Navy",
+        "Green",
+        "Yellow",
+        "Gray",
+        "Olive",
+        "White"
+      ],
       "inStock": 3,
       "soldOut": 5,
       "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "ratings": 57,
+      "ratings": "4.48",
       "reviews": 99,
       "price": "451.00",
       "id": "96",
-      "brandId": "2"
+      "brandId": 8
     },
     {
       "title": "Tasty Steel Bike",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/1/6.jpg",
+        "./images/brands/1/7.jpg",
+        "./images/brands/1/5.jpg",
+        "./images/brands/1/8.jpg",
+        "./images/brands/1/9.jpg",
+        "./images/brands/1/10.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Green",
+        "Maroon",
+        "Yellow",
+        "Lime",
+        "Aqua"
+      ],
       "inStock": 54,
       "soldOut": 90,
       "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "ratings": 71,
+      "ratings": "3.90",
       "reviews": 86,
       "price": "898.00",
       "id": "97",
-      "brandId": "3"
+      "brandId": 1
     },
     {
       "title": "Electronic Rubber Fish",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/2/4.jpg",
+        "./images/brands/2/9.jpg",
+        "./images/brands/2/11.jpg",
+        "./images/brands/2/13.jpg",
+        "./images/brands/2/2.jpg",
+        "./images/brands/2/12.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Purple",
+        "Silver",
+        "Navy",
+        "White",
+        "Blue"
+      ],
       "inStock": 10,
       "soldOut": 73,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 78,
+      "ratings": "2.87",
       "reviews": 22,
       "price": "522.00",
       "id": "98",
-      "brandId": "4"
+      "brandId": 2
     },
     {
       "title": "Luxurious Bronze Towels",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/3/1.jpg",
+        "./images/brands/3/6.jpg",
+        "./images/brands/3/13.jpg",
+        "./images/brands/3/3.jpg",
+        "./images/brands/3/14.jpg",
+        "./images/brands/3/5.jpg",
+        "./images/brands/3/11.jpg"
+      ],
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "colors": [
+        "Maroon",
+        "Navy",
+        "Blue",
+        "Gray"
+      ],
       "inStock": 43,
       "soldOut": 11,
       "description": "The Football Is Good For Training And Recreational Purposes",
-      "ratings": 29,
+      "ratings": "2.47",
       "reviews": 31,
       "price": "896.00",
       "id": "99",
-      "brandId": "5"
+      "brandId": 3
     },
     {
       "title": "Handcrafted Bronze Hat",
-      "images": [],
-      "sizes": [],
-      "colors": [],
+      "images": [
+        "./images/brands/4/11.jpg",
+        "./images/brands/4/9.jpg",
+        "./images/brands/4/14.jpg",
+        "./images/brands/4/5.jpg",
+        "./images/brands/4/3.jpg",
+        "./images/brands/4/7.jpg"
+      ],
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "colors": [
+        "Olive",
+        "Teal",
+        "Blue",
+        "Green",
+        "Lime"
+      ],
       "inStock": 61,
       "soldOut": 40,
       "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "ratings": 73,
+      "ratings": "3.91",
       "reviews": 41,
       "price": "437.00",
       "id": "100",
-      "brandId": "6"
+      "brandId": 4
     }
   ]
 }
