@@ -16,3 +16,16 @@
 button[disabled] {
   opacity: 0.6;
 }
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.active-filter {
+  @apply bg-black text-white;
+}
+
+.product-card__img::after {
+  content: "";
+  padding-bottom: 100%;
+}
