@@ -3,20 +3,20 @@
   <div class="w-full text-center my-20">
     <h1 class="text-3xl font-bold mb-14">Login to Your Account</h1>
     <form>
-      <div class="flex items-center bg-gray-200 p-3 m-7 text-xl rounded-md border">
-        <img src="/images/email.svg" alt="decor" width="20" />
+      <div class="flex items-center bg-gray-200 p-3 m-7 text-xl rounded-md border transition-all duration-500">
+        <i class="fa fa-envelope text-gray-500 transition-all duration-500"></i>
         <input type="email" placeholder="Email" class="outline-0 bg-transparent ml-2 w-full" required autocomplete="on" />
       </div>
-      <div class="flex items-center bg-gray-200 p-3 m-7 text-xl rounded-md border">
-        <img src="/images/lock-fill.svg" alt="decor" width="20" />
+      <div class="flex items-center bg-gray-200 p-3 m-7 text-xl rounded-md border transition-all duration-500">
+        <i class="fa fa-lock text-gray-500 transition-all duration-500"></i>
         <input type="password" placeholder="Password" class="outline-0 bg-transparent ml-2 w-full" required autocomplete="on" />
-        <img id="see-password" src="/images/eye-slash-fill.svg" alt="decor" width="20" />
+        <i id="see-password" class="fa fa-eye text-gray-400 transition-all duration-300"></i>
       </div>
-      <div>
-        <input type="checkbox" id="remember" />
+      <div class="flex items-center justify-center gap-3 mt-20">
+        <input type="checkbox" id="remember" class="w-5 h-5 accent-black rounded-full" />
         <label for="remember" class="text-xl">Remember me</label>
       </div>
-      <button class="w-5/6 bg-black rounded-full text-white text-2xl p-4 mt-52 mb-6" id="sign-in" disabled>Sign in</button>
+      <button class="w-5/6 bg-black rounded-full text-white text-2xl p-4 mt-40 mb-6" id="sign-in" disabled>Sign in</button>
     </form>
   </div>
 </div>

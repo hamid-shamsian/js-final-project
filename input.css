@@ -30,3 +30,11 @@ button[disabled] {
   content: "";
   padding-bottom: 100%;
 }
+
+.focused-input {
+  @apply border-black shadow-lg;
+}
+
+.focused-input i:first-child {
+  @apply text-black;
+}

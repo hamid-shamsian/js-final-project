@@ -1,22 +1,26 @@
 import { navigateTo } from "../router.js";
 import User, { authUser, rememberUser } from "../services/userService.js";
 import showToast from "../utils/toast.js";
-import { toggleInputsBorderOnFocusBlur } from "../utils/utilityFuncs.js";
+import { animateOnFocusBlur } from "../utils/utilityFuncs.js";
 
 export function init() {
   const form = document.querySelector("form");
-  const signInBtn = document.querySelector("#sign-in");
-  const seePwBtn = document.querySelector("#see-password");
+  const signInBtn = document.getElementById("sign-in");
+  const seePwBtn = document.getElementById("see-password");
   const [username, password] = form;
 
-  toggleInputsBorderOnFocusBlur(username, password);
+  animateOnFocusBlur(username, password);
 
   form.addEventListener("input", () => {
     if (username.value && password.value) signInBtn.removeAttribute("disabled");
     else signInBtn.setAttribute("disabled", "");
   });
 
-  seePwBtn.addEventListener("click", () => (form[1].type = form[1].type == "password" ? "text" : "password"));
+  seePwBtn.addEventListener("click", function () {
+    password.focus();
+    password.type = password.type == "password" ? "text" : "password";
+    this.classList.toggle("text-black");
+  });
 
   form.addEventListener("submit", async e => {
     e.preventDefault();
