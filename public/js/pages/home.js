@@ -1,9 +1,9 @@
 import User from "../services/userService.js";
 import { navigateTo } from "../router.js";
-import { getBrands } from "../services/brandService.js";
+import { getBrandOfSlug, getBrands } from "../services/brandService.js";
 import { getShoes } from "../services/shoeService.js";
 import { animateOnFocusBlur, renderShoeCard } from "../services/domService.js";
-import { setQueryParam } from "../utils/utilityFuncs.js";
+import { getQueryParam, setQueryParam } from "../utils/utilityFuncs.js";
 import { state } from "../../index.js";
 
 export const init = async () => {
@@ -15,6 +15,13 @@ export const init = async () => {
 
   const searchInput = document.querySelector("input[type='search']");
   animateOnFocusBlur(searchInput);
+
+  try {
+    const [{ id }] = await getBrandOfSlug(getQueryParam("filter"));
+    state.filteringBrandId = id;
+  } catch (err) {
+    return navigateTo(404);
+  }
 
   const brands = await getBrands();
   brands.forEach(renderBrandIcon);
