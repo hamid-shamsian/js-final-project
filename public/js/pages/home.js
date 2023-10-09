@@ -16,11 +16,14 @@ export const init = async () => {
   const searchInput = document.querySelector("input[type='search']");
   animateOnFocusBlur(searchInput);
 
-  try {
-    const [{ id }] = await getBrandOfSlug(getQueryParam("filter"));
-    state.filteringBrandId = id;
-  } catch (err) {
-    return navigateTo(404);
+  const filterQueryParam = getQueryParam("filter");
+  if (filterQueryParam) {
+    try {
+      const [{ id }] = await getBrandOfSlug(filterQueryParam);
+      state.filteringBrandId = id;
+    } catch (err) {
+      return navigateTo(404);
+    }
   }
 
   const brands = await getBrands();
