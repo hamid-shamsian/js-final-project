@@ -54,6 +54,6 @@ const RenderApp = async notToBePushedPath => {
   }
 };
 
-window.onpopstate = RenderApp; // to make Back and Forward buttons of the browser still working...
+window.onpopstate = e => RenderApp(); // to make Back and Forward buttons of the browser still working... (i used arrow function instead of simply assigning RenderApp function reference because onpopstate event on window passes an event object to the handler function and this will interfere with the RenderApp parameter functionality.)
 
 export default RenderApp;
