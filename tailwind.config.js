@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["public/index.html", "public/templates/*.html"],
+  content: ["./public/index.html", "./public/templates/*.html", "./public/js/pages/*.js"],
   theme: {
     fontFamily: { Inter: "Inter, system-ui" },
     extend: {}
