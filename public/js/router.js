@@ -2,25 +2,30 @@ import User from "./services/userService.js";
 import showToast from "./utils/toast.js";
 
 const routes = {
-  "/": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!", hasJS: true },
-  "/index.html": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!", hasJS: true },
-  "/login": { fileName: "login", title: "Shoea | Login", hasJS: true },
-  "/home": { fileName: "home", title: "Shoea | Home", hasJS: true },
-  404: { fileName: "404", title: "Shoea | Page Not Found!", hasJS: false }
+  "/": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
+  "/index.html": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
+  "/login": { fileName: "login", title: "Shoea | Login" },
+  "/home": { fileName: "home", title: "Shoea | Home" },
+  "/brands": { fileName: "brands", title: "Shoea | Brands" },
+  404: { fileName: "404", title: "Shoea | Page Not Found!", noJS: true }
 };
 const spinner = document.getElementById("spinner");
 
 export const navigateTo = input => {
   input.preventDefault?.(); // input has 2 valid types: maybe a normal string containing the relative path to go, or maybe an event object generated from clicking an anchor (a) element associated with a click event listener.
-  window.history.pushState({}, "", input.currentTarget?.href ?? input); // 👈 above comment 👆   and currentTarget instead of target: because some <a> tags may have children like icons or spans...
-  RenderApp();
+  const path = input.currentTarget?.href ?? input; // 👈 above comment 👆   and currentTarget instead of target: because some <a> tags may have children like icons or spans...
+  if (path == "404") RenderApp("404");
+  else {
+    window.history.pushState({}, "", path);
+    RenderApp();
+  }
 };
 
-const RenderApp = async () => {
+const RenderApp = async notToBePushedPath => {
   spinner.style.display = "";
 
-  const path = window.location.pathname;
-  const { fileName, title, hasJS } = routes[path] ?? routes[404];
+  const path = notToBePushedPath ?? window.location.pathname;
+  const { fileName, title, noJS } = routes[path] ?? routes[404];
 
   if (fileName == "onboarding" || fileName == "login") {
     if (User.get()) {
@@ -38,7 +43,7 @@ const RenderApp = async () => {
     const template = await fetch(`../templates/${fileName}.html`);
     const html = await template.text();
     document.getElementById("root").innerHTML = html;
-    if (hasJS) {
+    if (!noJS) {
       const module = await import(`./pages/${fileName}.js`);
       setTimeout(() => module.init?.(), 0); // invoke init function if it exists in the module (schedule to invoke it immediately after completion of returning html and parsing it to DOM)
     }
