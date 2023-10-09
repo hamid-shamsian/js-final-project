@@ -2,33 +2,36 @@ import User from "../services/userService.js";
 import { navigateTo } from "../router.js";
 import { getBrands } from "../services/brandService.js";
 import { getShoes } from "../services/shoeService.js";
-import { animateOnFocusBlur } from "../utils/utilityFuncs.js";
+import { animateOnFocusBlur, renderShoeCard } from "../services/domService.js";
+import { setQueryParam } from "../utils/utilityFuncs.js";
 import { state } from "../../index.js";
 
-export async function init() {
+export const init = async () => {
   const { fullName, avatarURL } = User.get();
   document.getElementById("user-fullname").textContent = fullName;
   document.getElementById("user-avatar").src = avatarURL;
 
-  document.querySelectorAll("a").forEach(a => a.addEventListener("click", navigateTo));
+  document.getElementById("greetings").textContent = sayGreetings();
 
   const searchInput = document.querySelector("input[type='search']");
   animateOnFocusBlur(searchInput);
 
   const brands = await getBrands();
   brands.forEach(renderBrandIcon);
-  brands.unshift({ title: "All", id: 0 });
+  brands.unshift({ title: "All", id: 0, slug: "" });
   brands.forEach(renderBrandfilter);
+
+  document.querySelectorAll("a").forEach(a => a.addEventListener("click", navigateTo)); // cant use event delegation here because the a tags have another children :(
 
   document.getElementById("brands-filter").addEventListener("click", filterByBrand);
 
   getAndRenderShoes();
-}
+};
 
 function renderBrandIcon({ title, slug }) {
   document.getElementById("brands-container").insertAdjacentHTML(
     "beforeend",
-    `<a href="/brand?${slug}" class="flex flex-col items-center gap-3">
+    `<a href="/brands?${slug}" class="flex flex-col items-center gap-3">
       <div class="w-16 h-16 rounded-full bg-gray-200 flex justify-center items-center">
         <img src="../images/${slug}.png" alt="${title}" />
       </div>
@@ -39,12 +42,12 @@ function renderBrandIcon({ title, slug }) {
   );
 }
 
-function renderBrandfilter({ title, id }) {
+function renderBrandfilter({ title, id, slug }) {
   document.getElementById("brands-filter").insertAdjacentHTML(
     "beforeend",
     `<span class="px-5 py-2 border-2 border-black rounded-full whitespace-nowrap transition-colors duration-300 ${
       id == state.filteringBrandId ? "active-filter" : ""
-    }" data-id="${id}">
+    }" data-id="${id}" data-slug="${slug}">
       ${title}
     </span>`
   );
@@ -56,24 +59,22 @@ async function getAndRenderShoes() {
   shoes.forEach(renderShoeCard);
 }
 
-function renderShoeCard({ title, id, images: [image], price }) {
-  document.getElementById("shoes-container").insertAdjacentHTML(
-    "beforeend",
-    `<article data-id="${id}">
-      <div class="product-card__img flex justify-center items-center rounded-3xl bg-gray-100">
-        <img src="${image}" alt="product image" />
-      </div>
-      <h3 class="font-bold text-xl mt-2 overflow-hidden whitespace-nowrap overflow-ellipsis">${title}</h3>
-      <span class="font-semibold">$ ${price}</span>
-    </article>`
-  );
-}
-
 function filterByBrand(e) {
+  //  👇 if e.target.id is truthy, it means the container element is clicked.
   if (!e.target.id && state.filteringBrandId != e.target.dataset.id) {
     e.currentTarget.querySelector(`span[data-id="${state.filteringBrandId}"]`).classList.remove("active-filter");
     state.filteringBrandId = +e.target.dataset.id;
     e.target.classList.add("active-filter");
+    setQueryParam("filter", e.target.dataset.slug);
     getAndRenderShoes();
   }
+}
+
+function sayGreetings() {
+  const hour = new Date().getHours();
+  if (hour < 4) return "Good Night 🌌";
+  if (hour < 12) return "Good Morning 🌄";
+  if (hour < 15) return "Good Afternoon 🕑";
+  if (hour < 20) return "Good Evening 🌆";
+  return "Good Night 🌌";
 }

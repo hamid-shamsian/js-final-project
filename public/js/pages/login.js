@@ -1,7 +1,7 @@
 import { navigateTo } from "../router.js";
 import User, { authUser, rememberUser } from "../services/userService.js";
 import showToast from "../utils/toast.js";
-import { animateOnFocusBlur } from "../utils/utilityFuncs.js";
+import { animateOnFocusBlur } from "../services/domService.js";
 
 export function init() {
   const form = document.querySelector("form");
