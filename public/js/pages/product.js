@@ -7,10 +7,9 @@ import User from "./../services/userService.js";
 import showToast from "../utils/toast.js";
 
 const order = { qty: 1 };
-let unitPrice = null;
 
 export const init = async () => {
-  document.getElementById("back").addEventListener("click", () => history.back());
+  document.getElementById("back").addEventListener("click", e => history.back()); // we cant only use reference to history.back because as always an event object is passed to handler and that way(using only reference) we will get an error.
 
   const productId = getQueryParam("id");
   try {
@@ -20,7 +19,7 @@ export const init = async () => {
     order.productId = product.id;
     order.size = product.sizes[0];
     order.color = product.colors[0];
-    unitPrice = product.price;
+    order.price = product.price;
   } catch (err) {
     return navigateTo(404);
   }
@@ -55,7 +54,7 @@ function changeQty(e) {
     order.qty ||= 1;
     if (order.qty > +this.dataset.max) order.qty = +this.dataset.max;
     this.children[1].textContent = order.qty;
-    document.getElementById("total-price").textContent = "$" + (order.qty * unitPrice).toFixed(2);
+    document.getElementById("total-price").textContent = "$" + (order.qty * order.price).toFixed(2);
   }
 }
 

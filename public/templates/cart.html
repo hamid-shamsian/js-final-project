@@ -1,0 +1,44 @@
+<div class="bg-gray-100 min-h-screen">
+  <div class="flex justify-between items-center gap-6 p-5">
+    <div class="flex gap-6">
+      <img src="./images/logo.png" alt="logo" width="20" />
+      <h1 class="text-2xl font-bold">My Cart</h1>
+    </div>
+    <i class="fa fa-search fa-2x text-gray-600"></i>
+  </div>
+  <div id="cart-container" class="p-5 flex flex-col gap-5 pb-52"></div>
+</div>
+
+<div class="fixed bottom-[71px] left-0 right-0 flex justify-between items-center gap-2 py-7 px-5 shadow-2xl shadow-black bg-white rounded-top">
+  <div>
+    <h3>Total Price</h3>
+    <span id="total-price" class="font-bold text-2xl mt-2"></span>
+  </div>
+  <a href="/checkout" class="w-52 bg-black rounded-full text-white text-xl text-center p-4 shadow-xl">
+    Checkout
+    <i class="fa fa-arrow-right ml-4"></i>
+  </a>
+</div>
+
+<nav class="footer fixed bottom-0 left-0 right-0 flex justify-evenly items-center gap-2 py-3 shadow-black bg-white text-sm font-bold">
+  <a href="/home" class="flex flex-col items-center">
+    <i class="fa fa-home fa-2x text-gray-400"></i>
+    <span>Home</span>
+  </a>
+  <a href="/cart" class="flex flex-col items-center">
+    <i class="fa fa-bag-shopping fa-2x"></i>
+    <span>Cart</span>
+  </a>
+  <a href="/orders" class="flex flex-col items-center">
+    <i class="fa fa-cart-shopping fa-2x text-gray-400"></i>
+    <span>Orders</span>
+  </a>
+  <a href="/wallet" class="flex flex-col items-center">
+    <i class="fa fa-wallet fa-2x text-gray-400"></i>
+    <span>Wallet</span>
+  </a>
+  <a href="/profile" class="flex flex-col items-center">
+    <i class="fa fa-user fa-2x text-gray-400"></i>
+    <span>Profile</span>
+  </a>
+</nav>

@@ -23,15 +23,17 @@
       "cart": [
         {
           "qty": 3,
-          "productId": "46",
-          "size": "39",
-          "color": "Teal"
-        },
-        {
-          "qty": 5,
           "productId": "3",
           "size": "40",
-          "color": "Maroon"
+          "color": "Yellow",
+          "price": "889.00"
+        },
+        {
+          "qty": 7,
+          "productId": "69",
+          "size": "42",
+          "color": "Teal",
+          "price": "301.00"
         }
       ]
     },

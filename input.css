@@ -38,3 +38,8 @@ button[disabled] {
 .focused-input i:first-child {
   @apply text-black;
 }
+
+.rounded-top {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}

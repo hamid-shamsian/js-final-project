@@ -77,6 +77,43 @@ export function renderShoeDetails({ title, images, soldOut, ratings, reviews, de
   document.getElementById("total-price").textContent = "$" + price;
 }
 // ========================================================================================================================================
+export function renderCartItem({ productId, title, image, color, size, price, qty, inStock }) {
+  document.getElementById("cart-container").insertAdjacentHTML(
+    "beforeend",
+    `<article class="flex items-center gap-3 p-5 rounded-3xl bg-white">
+      <div class="product-card__img flex-shrink-0 flex justify-center items-center rounded-3xl bg-gray-200 overflow-hidden">
+        <img src="${image}" alt="product image" width="110" />
+      </div>
+      <div class="w-full">
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-xl w-44 overflow-hidden whitespace-nowrap overflow-ellipsis">${title}</h2>
+          <img src="./images/bin.png" alt="trash" width="20" class="delete" data-id="${productId}"/>
+        </div>
+        <div class="my-3 flex items-center gap-3">
+          <span class="flex justify-center items-center rounded-full w-5 h-5 flex-shrink-0" style="background-color:${color}"></span>
+          <span>${color}</span>|
+          <span>Size:</span>
+          <span>${size}</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="font-bold text-lg">$${(price * qty).toFixed(2)}</span>
+          <div
+            id="qty"
+            class="flex w-28 justify-between items-center px-4 py-1 font-bold text-lg bg-gray-200 rounded-full"
+            data-id="${productId}"
+            data-max="${inStock}"
+          >
+            <i class="fa fa-minus" data-step="-1"></i>
+            <span>${qty}</span>
+            <i class="fa fa-plus" data-step="1"></i>
+          </div>
+        </div>
+      </div>
+    </article>`
+  );
+}
+
+// ========================================================================================================================================
 
 export function nextImage() {
   const sliderData = this.parentElement.dataset;
