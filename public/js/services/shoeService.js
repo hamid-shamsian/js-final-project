@@ -6,3 +6,5 @@ export const getShoes = (ofBrandId, popularitySort, count) => {
   }`;
   return http("GET", url);
 };
+
+export const getShoe = id => http("get", `shoes/${id}`);

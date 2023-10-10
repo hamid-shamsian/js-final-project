@@ -8,6 +8,7 @@ const routes = {
   "/home": { fileName: "home", title: "Shoea | Home" },
   "/brands": { fileName: "brands", title: "Shoea | Brands" },
   "/most-popular": { fileName: "mostPopular", title: "Shoea | Most Popular" },
+  "/product": { fileName: "product", title: "Shoea | Product Details" },
   404: { fileName: "404", title: "Shoea | Page Not Found!", noJS: true }
 };
 const spinner = document.getElementById("spinner");

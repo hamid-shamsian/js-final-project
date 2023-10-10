@@ -20,9 +20,20 @@
           "details": "no2, street9, square..., city..., state..."
         }
       ],
-      "completedOrders": [],
-      "activeOrder": {},
-      "wishlist": []
+      "cart": [
+        {
+          "qty": 3,
+          "productId": "46",
+          "size": "39",
+          "color": "Teal"
+        },
+        {
+          "qty": 5,
+          "productId": "3",
+          "size": "40",
+          "color": "Maroon"
+        }
+      ]
     },
     {
       "id": "2",
@@ -43,10 +54,7 @@
           "title": "address 3",
           "details": "no2, street9, square..., city..., state..."
         }
-      ],
-      "completedOrders": [],
-      "activeOrder": {},
-      "wishlist": []
+      ]
     },
     {
       "id": "3",
@@ -67,10 +75,7 @@
           "title": "address 3",
           "details": "no2, street9, square..., city..., state..."
         }
-      ],
-      "completedOrders": [],
-      "activeOrder": {},
-      "wishlist": []
+      ]
     }
   ],
   "brands": [
@@ -351,7 +356,7 @@
         "Yellow",
         "Lime",
         "Black",
-        "White",
+        "Fuchsia",
         "Silver"
       ],
       "inStock": 10,
@@ -576,7 +581,7 @@
         "Yellow",
         "Silver",
         "Lime",
-        "White"
+        "Fuchsia"
       ],
       "inStock": 91,
       "soldOut": 69,
@@ -700,7 +705,7 @@
         "Teal",
         "Yellow",
         "Black",
-        "White",
+        "Fuchsia",
         "Olive"
       ],
       "inStock": 14,
@@ -851,7 +856,7 @@
         "40"
       ],
       "colors": [
-        "White",
+        "Fuchsia",
         "Teal",
         "Silver"
       ],
@@ -880,7 +885,7 @@
         "42"
       ],
       "colors": [
-        "White",
+        "Fuchsia",
         "Purple",
         "Yellow",
         "Silver"
@@ -913,7 +918,7 @@
         "Yellow",
         "Blue",
         "Navy",
-        "White",
+        "Fuchsia",
         "Red"
       ],
       "inStock": 53,
@@ -1101,7 +1106,7 @@
         "Red",
         "Maroon",
         "Silver",
-        "White"
+        "Fuchsia"
       ],
       "inStock": 97,
       "soldOut": 9,
@@ -1288,7 +1293,7 @@
       "colors": [
         "Blue",
         "Navy",
-        "White",
+        "Fuchsia",
         "Silver",
         "Teal",
         "Aqua"
@@ -1353,7 +1358,7 @@
         "Red",
         "Lime",
         "Aqua",
-        "White"
+        "Fuchsia"
       ],
       "inStock": 69,
       "soldOut": 7,
@@ -1799,7 +1804,7 @@
         "40"
       ],
       "colors": [
-        "White",
+        "Fuchsia",
         "Aqua",
         "Gray",
         "Red",
@@ -1865,7 +1870,7 @@
       "colors": [
         "Navy",
         "Green",
-        "White"
+        "Fuchsia"
       ],
       "inStock": 91,
       "soldOut": 73,
@@ -2089,7 +2094,7 @@
       ],
       "colors": [
         "Aqua",
-        "White",
+        "Fuchsia",
         "Green",
         "Lime",
         "Blue",
@@ -2122,7 +2127,7 @@
       "colors": [
         "Silver",
         "Aqua",
-        "White",
+        "Fuchsia",
         "Navy",
         "Olive",
         "Yellow"
@@ -2277,7 +2282,7 @@
         "42"
       ],
       "colors": [
-        "White",
+        "Fuchsia",
         "Teal",
         "Aqua",
         "Gray",
@@ -2744,7 +2749,7 @@
         "42"
       ],
       "colors": [
-        "White",
+        "Fuchsia",
         "Yellow",
         "Aqua",
         "Olive"
@@ -2811,7 +2816,7 @@
         "Green",
         "Purple",
         "Teal",
-        "White",
+        "Fuchsia",
         "Gray"
       ],
       "inStock": 87,
@@ -2876,7 +2881,7 @@
       "colors": [
         "Black",
         "Teal",
-        "White",
+        "Fuchsia",
         "Silver",
         "Maroon",
         "Navy"
@@ -2942,7 +2947,7 @@
       ],
       "colors": [
         "Aqua",
-        "White",
+        "Fuchsia",
         "Teal",
         "Red",
         "Purple"
@@ -3008,7 +3013,7 @@
         "Silver",
         "Yellow",
         "Teal",
-        "White"
+        "Fuchsia"
       ],
       "inStock": 21,
       "soldOut": 75,
@@ -3103,7 +3108,7 @@
       ],
       "colors": [
         "Yellow",
-        "White",
+        "Fuchsia",
         "Purple",
         "Lime"
       ],
@@ -3137,7 +3142,7 @@
         "Yellow",
         "Gray",
         "Olive",
-        "White"
+        "Fuchsia"
       ],
       "inStock": 3,
       "soldOut": 5,
@@ -3199,7 +3204,7 @@
         "Purple",
         "Silver",
         "Navy",
-        "White",
+        "Fuchsia",
         "Blue"
       ],
       "inStock": 10,
@@ -3274,5 +3279,8 @@
       "id": "100",
       "brandId": 4
     }
-  ]
+  ],
+  "completedOrders": [],
+  "activeOrders": [],
+  "wishLists": []
 }

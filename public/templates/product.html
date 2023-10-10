@@ -1,0 +1,70 @@
+<div class="flex gap-6 p-5 bg-gray-100">
+  <i id="back" class="fa fa-arrow-left fa-2x"></i>
+</div>
+
+<div class="h-[35vh] bg-gray-100 relative">
+  <div id="images" class="flex justify-center items-center relative w-full h-full overflow-hidden"></div>
+
+  <div class="flex justify-around items-center absolute bottom-5 left-0 right-0" data-slide="1">
+    <i id="prev" class="fa fa-chevron-left fa-2x text-gray-500"></i>
+    <div id="slider" class="flex gap-2 relative">
+      <div id="slider-dot" class="w-7 h-2 bg-black rounded-full absolute left-0 transition-all duration-200"></div>
+    </div>
+    <i id="next" class="fa fa-chevron-right fa-2x text-gray-500"></i>
+  </div>
+</div>
+
+<div class="p-6">
+  <div class="flex justify-between items-center gap-5">
+    <h1 class="text-3xl font-bold overflow-hidden whitespace-nowrap overflow-ellipsis"></h1>
+    <i class="fa fa-heart fa-2x"></i>
+  </div>
+
+  <div class="my-4 flex items-center gap-5">
+    <span class="bg-gray-200 py-1 px-3 rounded-lg"><span id="sold"></span> Sold out</span>
+    <img src="./images/star.png" alt="stars" width="30" />
+    <p>
+      <span id="ratings"></span>
+      <span id="reviews"></span>
+    </p>
+  </div>
+  <hr />
+  <h2 class="text-xl font-bold my-3">Description</h2>
+  <p id="description" class="w-full overflow-hidden whitespace-nowrap overflow-ellipsis"></p>
+</div>
+
+<div class="pl-6 flex gap-6">
+  <div>
+    <h2 class="text-xl font-bold">Size</h2>
+    <div id="sizes" class="flex gap-3 mt-3"></div>
+  </div>
+  <div class="overflow-hidden">
+    <h2 class="text-xl font-bold">Color</h2>
+    <div id="colors" class="flex gap-3 mt-3 overflow-x-auto scrollbar-hidden pr-6"></div>
+  </div>
+</div>
+
+<div class="p-6">
+  <div class="flex items-center gap-6">
+    <h2 class="text-xl font-bold">Quantity</h2>
+    <div id="qty" class="flex w-36 justify-between items-center p-5 font-bold text-2xl bg-gray-200 h-14 rounded-full">
+      <i class="fa fa-minus" data-step="-1"></i>
+      <span>1</span>
+      <i class="fa fa-plus" data-step="1"></i>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <h3>Unit Price</h3>
+      <span id="unit-price" class="font-bold"></span>
+    </div>
+  </div>
+
+  <hr class="my-6" />
+
+  <div class="flex justify-between items-center">
+    <div>
+      <h3>Total Price</h3>
+      <span id="total-price" class="font-bold text-2xl mt-2">$430.00</span>
+    </div>
+    <button id="add" class="w-52 bg-black rounded-full text-white text-xl p-4"><i class="fa fa-bag-shopping mr-4"></i>Add to Cart</button>
+  </div>
+</div>

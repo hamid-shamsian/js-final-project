@@ -31,4 +31,8 @@ const User = (() => {
   };
 })();
 
+export function saveUserData(userId, data) {
+  return http("PATCH", `users/${userId}`, data);
+}
+
 export default User;
