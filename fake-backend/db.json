@@ -22,18 +22,12 @@
       ],
       "cart": [
         {
-          "qty": 3,
-          "productId": "3",
-          "size": "40",
-          "color": "Yellow",
-          "price": "889.00"
-        },
-        {
-          "qty": 7,
-          "productId": "69",
-          "size": "42",
-          "color": "Teal",
-          "price": "301.00"
+          "productId": "11",
+          "size": "39",
+          "color": "Navy",
+          "qty": 1,
+          "price": "708.00",
+          "id": 1696976738267
         }
       ]
     },
