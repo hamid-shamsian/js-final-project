@@ -10,7 +10,7 @@ export function animateOnFocusBlur(...inputs) {
     });
   });
 }
-// ------------------------------------------------------------------------------------------------------------------------
+// ========================================================================================================================================
 
 export function renderShoeCard({ title, id, images: [image], price }) {
   document.getElementById("shoes-container").insertAdjacentHTML(
@@ -26,10 +26,10 @@ export function renderShoeCard({ title, id, images: [image], price }) {
     </article>`
   );
 }
-// ------------------------------------------------------------------------------------------------------------------------
+// ========================================================================================================================================
 
-export function renderShoeDetails(shoe) {
-  document.getElementById("images").innerHTML = shoe.images
+export function renderShoeDetails({ title, images, soldOut, ratings, reviews, description, sizes, colors, inStock, price }) {
+  document.getElementById("images").innerHTML = images
     .map(
       (img, i) =>
         `<div class="flex justify-center items-center overflow-hidden transition-all duration-500 absolute w-full h-full ${
@@ -41,19 +41,19 @@ export function renderShoeDetails(shoe) {
     .join("");
 
   const slider = document.getElementById("slider");
-  slider.parentElement.dataset.totalSlides = shoe.images.length;
+  slider.parentElement.dataset.totalSlides = images.length;
 
-  for (let i = shoe.images.length - 1; i > -1; i--)
+  for (let i = images.length - 1; i > -1; i--)
     slider.insertAdjacentHTML("afterbegin", `<div class="${i ? "w-2" : "w-7"} h-2 bg-gray-400 rounded-full"></div>`);
 
-  document.querySelector("h1").textContent = shoe.title;
+  document.querySelector("h1").textContent = title;
 
-  document.getElementById("sold").textContent = shoe.soldOut;
-  document.getElementById("ratings").textContent = shoe.ratings;
-  document.getElementById("reviews").textContent = `(${shoe.reviews} reviews)`;
-  document.getElementById("description").textContent = shoe.description;
+  document.getElementById("sold").textContent = soldOut;
+  document.getElementById("ratings").textContent = ratings;
+  document.getElementById("reviews").textContent = `(${reviews} reviews)`;
+  document.getElementById("description").textContent = description;
 
-  document.getElementById("sizes").innerHTML = shoe.sizes
+  document.getElementById("sizes").innerHTML = sizes
     .map(
       (size, i) =>
         `<span class="flex justify-center items-center border-2 border-black rounded-full w-10 h-10 font-bold text-lg ${
@@ -62,7 +62,7 @@ export function renderShoeDetails(shoe) {
     )
     .join("");
 
-  document.getElementById("colors").innerHTML = shoe.colors
+  document.getElementById("colors").innerHTML = colors
     .map(
       (color, i) =>
         `<span class="flex justify-center items-center rounded-full w-10 h-10 flex-shrink-0" style="background-color:${color}" data-color="${color}">${
@@ -71,50 +71,56 @@ export function renderShoeDetails(shoe) {
     )
     .join("");
 
-  document.getElementById("qty").dataset.max = shoe.inStock;
+  document.getElementById("qty").dataset.max = inStock;
 
-  document.getElementById("unit-price").textContent = "$" + shoe.price;
-  document.getElementById("total-price").textContent = "$" + shoe.price;
+  document.getElementById("unit-price").textContent = "$" + price;
+  document.getElementById("total-price").textContent = "$" + price;
 }
-// ------------------------------------------------------------------------------------------------------------------------
+// ========================================================================================================================================
 
 export function nextImage() {
-  if (this.parentElement.dataset.slide < this.parentElement.dataset.totalSlides) {
-    const leftIMG = document.querySelector(`#images div:nth-child(${this.parentElement.dataset.slide})`);
-    const rightIMG = document.querySelector(`#images div:nth-child(${++this.parentElement.dataset.slide})`); // this will select next slide and also increases dataset.slide by one :)
+  const sliderData = this.parentElement.dataset;
+
+  if (sliderData.slide < sliderData.totalSlides) {
+    const leftImg = document.querySelector(`#images div:nth-child(${sliderData.slide})`);
+    const rightImg = document.querySelector(`#images div:nth-child(${++sliderData.slide})`); // this will select next slide and also increases dataset.slide by one :)
     const sliderDot = document.getElementById("slider-dot");
 
-    leftIMG.style.left = "-100%";
-    leftIMG.style.right = "100%";
-    rightIMG.style.left = 0;
-    rightIMG.style.right = 0;
+    leftImg.style.left = "-100%";
+    leftImg.style.right = "100%";
+    rightImg.style.left = 0;
+    rightImg.style.right = 0;
 
-    sliderDot.parentElement.children[this.parentElement.dataset.slide - 2].style.width = "8px";
-    sliderDot.parentElement.children[this.parentElement.dataset.slide - 1].style.width = "28px";
+    const dots = sliderDot.parentElement.children;
+    dots[sliderData.slide - 2].style.width = "8px";
+    dots[sliderData.slide - 1].style.width = "28px";
     sliderDot.style.width = "44px";
     setTimeout(() => {
-      sliderDot.style.left = `${16 * (this.parentElement.dataset.slide - 1)}px`;
+      sliderDot.style.left = `${16 * (sliderData.slide - 1)}px`;
       sliderDot.style.width = "28px";
     }, 250);
   }
 }
-// ------------------------------------------------------------------------------------------------------------------------
+// ========================================================================================================================================
 
 export function prevImage() {
-  if (this.parentElement.dataset.slide > 1) {
-    const rightIMG = document.querySelector(`#images div:nth-child(${this.parentElement.dataset.slide})`);
-    const leftIMG = document.querySelector(`#images div:nth-child(${--this.parentElement.dataset.slide})`);
+  const sliderData = this.parentElement.dataset;
+
+  if (sliderData.slide > 1) {
+    const rightImg = document.querySelector(`#images div:nth-child(${sliderData.slide})`);
+    const leftImg = document.querySelector(`#images div:nth-child(${--sliderData.slide})`);
     const sliderDot = document.getElementById("slider-dot");
 
-    leftIMG.style.left = 0;
-    leftIMG.style.right = 0;
-    rightIMG.style.left = "100%";
-    rightIMG.style.right = "-100%";
+    leftImg.style.left = 0;
+    leftImg.style.right = 0;
+    rightImg.style.left = "100%";
+    rightImg.style.right = "-100%";
 
-    sliderDot.parentElement.children[this.parentElement.dataset.slide - 1].style.width = "28px";
-    sliderDot.parentElement.children[this.parentElement.dataset.slide].style.width = "8px";
+    const dots = sliderDot.parentElement.children;
+    dots[sliderData.slide - 1].style.width = "28px";
+    dots[sliderData.slide].style.width = "8px";
     sliderDot.style.width = "44px";
-    sliderDot.style.left = `${16 * (this.parentElement.dataset.slide - 1)}px`;
+    sliderDot.style.left = `${16 * (sliderData.slide - 1)}px`;
     setTimeout(() => {
       sliderDot.style.width = "28px";
     }, 250);
