@@ -25,11 +25,11 @@ export const init = async () => {
   brands.unshift({ title: "All", id: 0, slug: "" });
   brands.forEach(renderBrandfilter);
 
-  document.querySelectorAll("a").forEach(a => a.addEventListener("click", navigateTo)); // cant use event delegation here because the a tags have another children :(
-
   document.getElementById("brands-filter").addEventListener("click", filterByBrand);
 
-  getAndRenderShoes();
+  await getAndRenderShoes();
+
+  document.querySelectorAll("a").forEach(a => a.addEventListener("click", navigateTo)); // cant use event delegation here because the a tags have another children :(
 };
 
 function renderBrandfilter({ title, id, slug }) {

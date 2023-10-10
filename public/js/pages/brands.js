@@ -18,6 +18,8 @@ export async function init() {
     const shoesOfBrand = await getShoes(id);
 
     shoesOfBrand.forEach(renderShoeCard);
+
+    document.querySelectorAll("a").forEach(a => a.addEventListener("click", navigateTo)); // cant use event delegation here because the a tags have another children :(
   } catch (err) {
     navigateTo(404);
   }
