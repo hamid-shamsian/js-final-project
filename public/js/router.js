@@ -11,6 +11,7 @@ const routes = {
   "/cart": { fileName: "cart", title: "Shoea | Cart" },
   "/checkout": { fileName: "checkout", title: "Shoea | Checkout" },
   "/payment": { fileName: "payment", title: "Shoea | Payment" },
+  "/orders": { fileName: "orders", title: "Shoea | Orders" },
   404: { fileName: "404", title: "Shoea | Page Not Found!", noJS: true }
 };
 const spinner = document.getElementById("spinner");

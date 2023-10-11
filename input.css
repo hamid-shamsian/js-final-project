@@ -48,3 +48,7 @@ button[disabled] {
   border-bottom-right-radius: 40px;
   border-top-right-radius: 40px;
 }
+
+.active-tab {
+  @apply border-black text-black;
+}

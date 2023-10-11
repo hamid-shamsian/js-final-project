@@ -1,0 +1,53 @@
+<div class="bg-gray-100 min-h-screen">
+  <div class="flex justify-between items-center gap-6 p-5">
+    <div class="flex gap-6">
+      <img src="./images/logo.png" alt="logo" width="20" />
+      <h1 class="text-2xl font-bold">My Orders</h1>
+    </div>
+    <i class="fa fa-search fa-2x text-gray-600"></i>
+  </div>
+
+  <div id="tabs" class="flex justify-even p-5">
+    <h2 id="active" class="font-bold text-xl text-center p-4 basis-1 flex-grow border-b-4 text-gray-500 active-tab">Active</h2>
+    <h2 id="completed" class="font-bold text-xl text-center p-4 basis-1 flex-grow border-b-4 text-gray-500">Completed</h2>
+  </div>
+
+  <div id="active-container" class="p-5 flex flex-col gap-5 pb-24">
+    <div class="flex flex-col items-center" style="display: none">
+      <img src="./images/notfound.png" alt="decor" width="300" class="mt-20" />
+      <p class="text-xl font-bold mt-10 mb-3">You don't have an order yet</p>
+      <p class="">You don't have an active order at this time</p>
+    </div>
+  </div>
+
+  <div id="completed-container" class="p-5 flex flex-col gap-5 pb-24" style="display: none">
+    <div class="flex flex-col items-center" style="display: none">
+      <img src="./images/notfound.png" alt="decor" width="300" class="mt-20" />
+      <p class="text-xl font-bold mt-10 mb-3">You don't have an order yet</p>
+      <p class="">You don't have a completed order at this time</p>
+    </div>
+  </div>
+</div>
+
+<nav class="footer fixed bottom-0 left-0 right-0 flex justify-evenly items-center gap-2 py-3 shadow-black bg-white text-sm font-bold">
+  <a href="/home" class="flex flex-col items-center">
+    <i class="fa fa-home fa-2x text-gray-400"></i>
+    <span>Home</span>
+  </a>
+  <a href="/cart" class="flex flex-col items-center">
+    <i class="fa fa-bag-shopping fa-2x text-gray-400"></i>
+    <span>Cart</span>
+  </a>
+  <a href="/orders" class="flex flex-col items-center">
+    <i class="fa fa-cart-shopping fa-2x"></i>
+    <span>Orders</span>
+  </a>
+  <a href="/wallet" class="flex flex-col items-center">
+    <i class="fa fa-wallet fa-2x text-gray-400"></i>
+    <span>Wallet</span>
+  </a>
+  <a href="/profile" class="flex flex-col items-center">
+    <i class="fa fa-user fa-2x text-gray-400"></i>
+    <span>Profile</span>
+  </a>
+</nav>
