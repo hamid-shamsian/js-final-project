@@ -12,6 +12,33 @@ export function animateOnFocusBlur(...inputs) {
 }
 // ========================================================================================================================================
 
+export function renderBrandIcon({ title, slug }) {
+  document.getElementById("brands-container").insertAdjacentHTML(
+    "beforeend",
+    `<a href="/brands?${slug}" class="flex flex-col items-center gap-3">
+      <div class="w-16 h-16 rounded-full bg-gray-200 flex justify-center items-center">
+        <img src="../images/${slug}.png" alt="${title}" />
+      </div>
+      <span class="font-bold text-center w-5/6 overflow-hidden whitespace-nowrap overflow-ellipsis">
+        ${title}
+      </span>
+    </a>`
+  );
+}
+// ========================================================================================================================================
+
+export function renderBrandfilter({ title, id, slug }, selectedId) {
+  document.getElementById("brands-filter").insertAdjacentHTML(
+    "beforeend",
+    `<span class="px-5 py-2 border-2 border-black rounded-full whitespace-nowrap transition-colors duration-300 ${
+      id == selectedId ? "active-filter" : ""
+    }" data-id="${id}" data-slug="${slug}">
+      ${title}
+    </span>`
+  );
+}
+// ========================================================================================================================================
+
 export function renderShoeCard({ title, id, images: [image], price }) {
   document.getElementById("shoes-container").insertAdjacentHTML(
     "beforeend",
@@ -221,4 +248,15 @@ export function renderMethodCard(method) {
       </div>`;
 
   document.getElementById("choose-method").className = method ? "fa fa-edit fa-lg" : "fa fa-chevron-right fa-lg";
+}
+
+export function renderSearchResultItem({ id, title, images: [image], price }) {
+  document.getElementById("result-box").insertAdjacentHTML(
+    "beforeend",
+    `<article data-href="/product?id=${id}" class="flex justify-between items-center py-5 gap-5 border-b border-gray-400">
+      <img src="${image}" alt="product image" width="60" />
+      <h4 class="font-bol text-xl w-44 overflow-hidden whitespace-nowrap overflow-ellipsis">${title}</h4>
+      <span class="font-bold">${price}</span>
+    </article>`
+  );
 }

@@ -8,3 +8,5 @@ export const getShoes = (ofBrandId, popularitySort, count) => {
 };
 
 export const getShoe = id => http("get", `shoes/${id}`);
+
+export const searchInShoes = (query, count) => http("get", `shoes?q=${query}${count ? `&_limit=${count}` : ""}`);

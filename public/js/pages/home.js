@@ -1,9 +1,10 @@
 import User from "../services/userService.js";
 import { navigateTo } from "../router.js";
 import { getBrandOfSlug, getBrands } from "../services/brandService.js";
-import { getShoes } from "../services/shoeService.js";
-import { animateOnFocusBlur, renderShoeCard } from "../services/domService.js";
+import { getShoes, searchInShoes } from "../services/shoeService.js";
+import { animateOnFocusBlur, renderBrandIcon, renderBrandfilter, renderShoeCard, renderSearchResultItem } from "../services/domService.js";
 import { getQueryParam, setQueryParam } from "../utils/utilityFuncs.js";
+import { debounce } from "../utils/utilityFuncs.js";
 import { state } from "../../index.js";
 
 export const init = async () => {
@@ -15,6 +16,7 @@ export const init = async () => {
 
   const searchInput = document.querySelector("input[type='search']");
   animateOnFocusBlur(searchInput);
+  searchInput.addEventListener("input", startSearch);
 
   const filterQueryParam = getQueryParam("filter");
   if (filterQueryParam) {
@@ -29,39 +31,15 @@ export const init = async () => {
   const brands = await getBrands();
   brands.forEach(renderBrandIcon);
   brands.unshift({ title: "All", id: 0, slug: "" });
-  brands.forEach(renderBrandfilter);
+  brands.forEach(item => renderBrandfilter(item, state.filteringBrandId));
 
   document.getElementById("brands-filter").addEventListener("click", filterByBrand);
 
   await getAndRenderShoes();
 
   document.querySelectorAll("a").forEach(a => a.addEventListener("click", navigateTo)); // cant use event delegation here because the a tags have another children :(
+  document.getElementById("result-box").addEventListener("click", handleClickOnSearchResults);
 };
-
-function renderBrandIcon({ title, slug }) {
-  document.getElementById("brands-container").insertAdjacentHTML(
-    "beforeend",
-    `<a href="/brands?${slug}" class="flex flex-col items-center gap-3">
-      <div class="w-16 h-16 rounded-full bg-gray-200 flex justify-center items-center">
-        <img src="../images/${slug}.png" alt="${title}" />
-      </div>
-      <span class="font-bold text-center w-5/6 overflow-hidden whitespace-nowrap overflow-ellipsis">
-        ${title}
-      </span>
-    </a>`
-  );
-}
-
-function renderBrandfilter({ title, id, slug }) {
-  document.getElementById("brands-filter").insertAdjacentHTML(
-    "beforeend",
-    `<span class="px-5 py-2 border-2 border-black rounded-full whitespace-nowrap transition-colors duration-300 ${
-      id == state.filteringBrandId ? "active-filter" : ""
-    }" data-id="${id}" data-slug="${slug}">
-      ${title}
-    </span>`
-  );
-}
 
 async function getAndRenderShoes() {
   document.getElementById("shoes-container").innerHTML = "";
@@ -87,4 +65,40 @@ function sayGreetings() {
   if (hour < 15) return "Good Afternoon 🕑";
   if (hour < 20) return "Good Evening 🌆";
   return "Good Night 🌌";
+}
+
+const debouncedGetAndRenderSearchResults = debounce(getAndRenderSearchResults);
+
+function startSearch({ target: { value }, inputType }) {
+  const resultBox = document.getElementById("result-box");
+  if (value.length == 1 && inputType == "insertText") {
+    resultBox.className = "line";
+    setTimeout(() => (resultBox.className = "open"), 300);
+  } else if (!value.length) {
+    resultBox.innerHTML = "";
+    resultBox.className = "invisible";
+  } else {
+    resultBox.innerHTML = `
+    <div class="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+      <img src="images/spinner.svg" alt="spinner" />
+    </div>`;
+
+    debouncedGetAndRenderSearchResults(value);
+  }
+}
+
+async function getAndRenderSearchResults(query) {
+  const results = await searchInShoes(query, 5);
+  const resultBox = document.getElementById("result-box");
+  resultBox.innerHTML = "";
+
+  if (results.length) {
+    results.forEach(renderSearchResultItem);
+    resultBox.innerHTML += "<p class='text-center text-xl mt-6 font-bold text-gray-700'>See more...</p>";
+  } else resultBox.innerHTML = "<p class='text-center text-xl mt-24 font-bold text-gray-700'>No Results Found...</p>";
+}
+
+function handleClickOnSearchResults({ target }) {
+  const href = target.parentElement.dataset.href ?? target.dataset.href;
+  navigateTo(href);
 }

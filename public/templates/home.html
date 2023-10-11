@@ -14,9 +14,12 @@
   </div>
 </div>
 
-<div class="flex items-center bg-gray-200 p-3 m-5 text-xl rounded-md border transition-all duration-500">
-  <i class="fa fa-search text-gray-500 transition-all duration-500"></i>
-  <input type="search" placeholder="Search in Shoes, Brands..." class="outline-0 bg-transparent ml-2 w-full" />
+<div class="relative">
+  <div class="flex items-center bg-gray-200 p-3 m-5 text-xl rounded-md border transition-all duration-500">
+    <i class="fa fa-search text-gray-500 transition-all duration-500"></i>
+    <input type="search" placeholder="Search in Shoes, Brands..." class="outline-0 bg-transparent ml-2 w-full" />
+  </div>
+  <div id="result-box" class="invisible"></div>
 </div>
 
 <div id="brands-container" class="p-5 grid grid-cols-4 gap-y-8"></div>

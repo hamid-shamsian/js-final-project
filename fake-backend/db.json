@@ -34,6 +34,14 @@
           "qty": 2,
           "price": "392.00",
           "id": 1697047460938
+        },
+        {
+          "productId": "46",
+          "size": "38",
+          "color": "Lime",
+          "qty": 1,
+          "price": "392.00",
+          "id": 1697052485604
         }
       ],
       "lastUsedShipMtdId": "2"

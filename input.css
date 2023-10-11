@@ -49,6 +49,23 @@ button[disabled] {
   border-top-right-radius: 40px;
 }
 
+.rounded-bottom {
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
 .active-tab {
   @apply border-black text-black;
+}
+
+#result-box {
+  @apply absolute top-10 left-0 right-0 mt-5 mx-48 h-0 px-5 flex flex-col bg-gray-200 bg-opacity-90 border shadow-2xl border-black overflow-hidden rounded-bottom transition-all duration-500;
+}
+
+#result-box.line {
+  @apply mx-5;
+}
+
+#result-box.open {
+  @apply mx-5 h-[600px];
 }
