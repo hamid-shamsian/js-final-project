@@ -87,7 +87,7 @@ export function renderCartItem(containerId, { id, title, image, color, size, pri
       </div>
       <div class="w-full">
         <div class="flex justify-between items-center">
-          <h2 class="font-bold text-xl w-44 overflow-hidden whitespace-nowrap overflow-ellipsis">${id}</h2>
+          <h2 class="font-bold text-xl w-44 overflow-hidden whitespace-nowrap overflow-ellipsis">${title}</h2>
           ${staticCard ? "" : `<img src="./images/bin.png" alt="trash" width="20" class="delete" data-id="${id}"/>`}
         </div>
         <div class="my-3 flex items-center gap-3">

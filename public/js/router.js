@@ -10,6 +10,7 @@ const routes = {
   "/most-popular": { fileName: "mostPopular", title: "Shoea | Most Popular" },
   "/product": { fileName: "product", title: "Shoea | Product Details" },
   "/cart": { fileName: "cart", title: "Shoea | Cart" },
+  "/checkout": { fileName: "checkout", title: "Shoea | Checkout" },
   404: { fileName: "404", title: "Shoea | Page Not Found!", noJS: true }
 };
 const spinner = document.getElementById("spinner");
