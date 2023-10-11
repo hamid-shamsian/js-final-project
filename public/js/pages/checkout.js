@@ -92,6 +92,7 @@ function applyAddress() {
 
 function applyMethod() {
   lastUsedShipMtdId = document.getElementById("method-items")["method"].value;
+  User.set({ ...User.get(), lastUsedShipMtdId }); // because the value is primitive...
   updateMethodData();
   closeModal();
   saveUserData(userId, { lastUsedShipMtdId });
@@ -99,6 +100,6 @@ function applyMethod() {
 
 function updateTotalPrice() {
   document.getElementById("total-price").textContent = formatPrice(
-    shippingMethods.find(m => m.id == lastUsedShipMtdId).price + cart.reduce((sum, item) => item.price * item.qty + sum, 0)
+    (shippingMethods.find(m => m.id == lastUsedShipMtdId)?.price || 0) + cart.reduce((sum, item) => item.price * item.qty + sum, 0)
   );
 }
