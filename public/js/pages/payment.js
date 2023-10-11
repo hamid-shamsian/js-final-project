@@ -1,6 +1,6 @@
 import { navigateTo } from "../router.js";
 import { addOrder } from "../services/orderService.js";
-import User from "../services/userService.js";
+import User, { saveUserData } from "../services/userService.js";
 import showToast from "../utils/toast.js";
 
 export const init = async () => {
@@ -18,5 +18,7 @@ async function makeOrder() {
 
   showToast("Successfully Made Order :)", "green");
   document.getElementById("modal").style.display = "";
+
   items.length = 0;
+  saveUserData(userId, { cart: [] });
 }
