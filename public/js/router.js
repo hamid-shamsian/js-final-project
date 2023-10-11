@@ -10,6 +10,7 @@ const routes = {
   "/product": { fileName: "product", title: "Shoea | Product Details" },
   "/cart": { fileName: "cart", title: "Shoea | Cart" },
   "/checkout": { fileName: "checkout", title: "Shoea | Checkout" },
+  "/payment": { fileName: "payment", title: "Shoea | Payment" },
   404: { fileName: "404", title: "Shoea | Page Not Found!", noJS: true }
 };
 const spinner = document.getElementById("spinner");
@@ -42,6 +43,9 @@ const RenderApp = async is404 => {
   } else if (path == "/checkout" && !user.cart?.length) {
     showToast("Your Cart is Empty!", "orangered"); // protect checkout page against signed-in users with no cart item.
     return navigateTo("/home");
+  } else if (path == "/payment" && (!user.cart?.length || !user.addresses.some(a => a.active) || !user.lastUsedShipMtdId)) {
+    showToast("You still have incomplete Order Data!", "orangered"); // protect payment page against users with incomplete order data.
+    return navigateTo("/checkout");
   }
   // ============================================
 

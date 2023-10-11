@@ -28,44 +28,12 @@
       ],
       "cart": [
         {
-          "productId": "15",
-          "size": "42",
-          "color": "Navy",
-          "qty": 1,
-          "price": "708.00",
-          "id": 1696976738263
-        },
-        {
-          "productId": "46",
+          "productId": "3",
           "size": "38",
-          "color": "Lime",
-          "qty": 3,
-          "price": "392.00",
-          "id": 1697027744061
-        },
-        {
-          "productId": "40",
-          "size": "40",
-          "color": "Olive",
-          "qty": 2,
-          "price": "713.00",
-          "id": 1697027969522
-        },
-        {
-          "productId": "69",
-          "size": "41",
-          "color": "Purple",
-          "qty": 5,
-          "price": "301.00",
-          "id": 1697028124586
-        },
-        {
-          "productId": "51",
-          "size": "41",
-          "color": "Black",
-          "qty": 3,
-          "price": "611.00",
-          "id": 1697028259858
+          "color": "Green",
+          "qty": 1,
+          "price": "889.00",
+          "id": 1697038613021
         }
       ],
       "lastUsedShipMtdId": "2"
@@ -3353,7 +3321,105 @@
       "price": 30
     }
   ],
-  "completedOrders": [],
-  "activeOrders": [],
+  "activeOrders": [
+    {
+      "userId": "1",
+      "items": [
+        {
+          "productId": "15",
+          "size": "42",
+          "color": "Navy",
+          "qty": 1,
+          "price": "708.00",
+          "id": 1696976738263
+        },
+        {
+          "productId": "46",
+          "size": "38",
+          "color": "Lime",
+          "qty": 3,
+          "price": "392.00",
+          "id": 1697027744061
+        },
+        {
+          "productId": "40",
+          "size": "40",
+          "color": "Olive",
+          "qty": 2,
+          "price": "713.00",
+          "id": 1697027969522
+        },
+        {
+          "productId": "69",
+          "size": "41",
+          "color": "Purple",
+          "qty": 5,
+          "price": "301.00",
+          "id": 1697028124586
+        },
+        {
+          "productId": "51",
+          "size": "41",
+          "color": "Black",
+          "qty": 3,
+          "price": "611.00",
+          "id": 1697028259858
+        },
+        {
+          "productId": "46",
+          "size": "38",
+          "color": "Navy",
+          "qty": 1,
+          "price": "392.00",
+          "id": 1697033473772
+        }
+      ],
+      "addressId": 2,
+      "shipMtdId": "3",
+      "id": 1697038578517
+    }
+  ],
+  "completedOrders": [
+    {
+      "userId": "1",
+      "items": [
+        {
+          "productId": "3",
+          "size": "38",
+          "color": "Green",
+          "qty": 1,
+          "price": "889.00",
+          "id": 1697038613021
+        },
+        {
+          "productId": "40",
+          "size": "40",
+          "color": "Olive",
+          "qty": 2,
+          "price": "713.00",
+          "id": 1697027969522
+        },
+        {
+          "productId": "69",
+          "size": "41",
+          "color": "Purple",
+          "qty": 5,
+          "price": "301.00",
+          "id": 1697028124586
+        },
+        {
+          "productId": "51",
+          "size": "41",
+          "color": "Black",
+          "qty": 3,
+          "price": "611.00",
+          "id": 1697028259858
+        }
+      ],
+      "addressId": 3,
+      "shipMtdId": "2",
+      "id": 1697038638260
+    }
+  ],
   "wishLists": []
 }

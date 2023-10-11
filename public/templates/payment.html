@@ -1,0 +1,73 @@
+<div class="bg-gray-100 min-h-screen px-5 flex flex-col justify-between">
+  <div>
+    <div class="fixed left-0 right-0 shadow-lg flex justify-between items-center p-5 bg-inherit">
+      <div class="flex gap-6">
+        <i id="back" class="fa fa-arrow-left fa-2x"></i>
+        <h1 class="text-2xl font-bold">Payment Methods</h1>
+      </div>
+      <i class="fa fa-plus fa-2x text-gray-600"></i>
+    </div>
+
+    <p class="pt-28 text-lg">Select the payment method you want to use.</p>
+
+    <label for="payment-1">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/google.png" alt="decor" class="rounded-full" width="40" />
+          <p class="font-bold text-lg mb-1">Google Pay</p>
+        </div>
+        <input id="payment-1" type="radio" class="accent-black w-5 h-5" name="payment" />
+      </article>
+    </label>
+    <label for="payment-2">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/google.png" alt="decor" class="rounded-full" width="40" />
+          <p class="font-bold text-lg mb-1">Google Pay</p>
+        </div>
+        <input id="payment-2" type="radio" class="accent-black w-5 h-5" name="payment" />
+      </article>
+    </label>
+    <label for="payment-3">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/google.png" alt="decor" class="rounded-full" width="40" />
+          <p class="font-bold text-lg mb-1">Google Pay</p>
+        </div>
+        <input id="payment-3" type="radio" class="accent-black w-5 h-5" name="payment" />
+      </article>
+    </label>
+    <label for="payment-4">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/google.png" alt="decor" class="rounded-full" width="40" />
+          <p class="font-bold text-lg mb-1">Google Pay</p>
+        </div>
+        <input id="payment-4" type="radio" class="accent-black w-5 h-5" name="payment" />
+      </article>
+    </label>
+    <label for="payment-5">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/google.png" alt="decor" class="rounded-full" width="40" />
+          <p class="font-bold text-lg mb-1">Google Pay</p>
+        </div>
+        <input id="payment-5" type="radio" class="accent-black w-5 h-5" name="payment" />
+      </article>
+    </label>
+  </div>
+
+  <button id="confirm" class="block w-full bg-black rounded-full text-white text-xl text-center p-4 shadow-xl my-8">Confirm Payment</button>
+</div>
+
+<div id="modal" class="fixed bottom-0 top-0 left-0 right-0 flex justify-center items-center bg-black bg-opacity-50 z-50" style="display: none">
+  <div class="flex flex-col items-center gap-10 p-10 rounded-3xl bg-white m-6">
+    <img src="./images/ordersuccess.png" alt="decor" width="200" />
+    <h3 class="text-2xl font-bold">Order Successful!</h3>
+    <p class="text-xl text-center">You have successfully made order</p>
+    <div>
+      <button id="ok" class="w-full bg-black rounded-full font-bold text-xl text-center text-white p-4 shadow-xl">View Order</button>
+      <button class="w-full bg-gray-300 rounded-full font-bold text-xl text-center text-gray-600 p-4 mt-5">View E-Receipt</button>
+    </div>
+  </div>
+</div>
