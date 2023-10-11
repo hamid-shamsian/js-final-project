@@ -8,30 +8,26 @@
   </div>
 
   <h2 class="pt-28 text-xl font-bold">Shipping Address</h2>
-
   <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
     <div class="flex items-center gap-4">
       <img src="./images/location.png" alt="decor" class="rounded-full" width="70" />
       <div id="address">
-        <p class="font-bold text-lg mb-1">Home</p>
-        <p class="w-48 overflow-hidden whitespace-nowrap overflow-ellipsis">Lorem ipsum dolor sit amet.</p>
+        <p class="font-bold text-lg mb-1"></p>
+        <p class="w-48 overflow-hidden whitespace-nowrap overflow-ellipsis"></p>
       </div>
     </div>
-    <i id="change-address" class="fa fa-edit fa-lg"></i>
+    <i id="choose-address" class="fa fa-edit fa-lg"></i>
   </article>
 
   <hr />
+  <h2 class="pt-8 text-xl font-bold">Order List</h2>
   <div id="order-list" class="flex flex-col gap-5 py-5"></div>
   <hr />
 
-  <h2 class="pt-8 text-xl font-bold">Choose Shipping</h2>
-
+  <h2 class="pt-8 text-xl font-bold">Shipping Method</h2>
   <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
-    <div class="flex items-center gap-4">
-      <i class="fa fa-truck-fast fa-xl"></i>
-      <p class="font-bold text-lg">Choose Shipping Type</p>
-    </div>
-    <i id="shipping" class="fa fa-chevron-right fa-lg"></i>
+    <div id="shipping-method"></div>
+    <i id="choose-method" class="fa fa-chevron-right fa-lg"></i>
   </article>
 
   <hr />
@@ -46,21 +42,21 @@
 
   <article class="py-3 px-7 rounded-3xl bg-white my-3">
     <div class="flex justify-between items-center my-5">
-      <span>Products Total</span>
+      <span>Amount</span>
       <span id="products-price" class="font-bold"></span>
     </div>
     <div class="flex justify-between items-center my-5">
       <span>Shipping</span>
-      <span id="shipping-price" class="font-bold">-</span>
+      <span id="shipping-price" class="font-bold"></span>
     </div>
-    <div class="flex justify-between items-center my-5">
-      <span>Promo Code OFF</span>
+    <div class="flex justify-between items-center my-5" style="display: none">
+      <span>Promo</span>
       <span id="off-price" class="font-bold">-</span>
     </div>
     <hr />
     <div class="flex justify-between items-center my-5">
-      <span>Final Payment</span>
-      <span id="final-price" class="font-bold">-</span>
+      <span>Total</span>
+      <span id="total-price" class="font-bold">-</span>
     </div>
   </article>
 
@@ -68,4 +64,42 @@
     Continue to Payment
     <i class="fa fa-arrow-right ml-4"></i>
   </a>
+</div>
+
+<!-- Modals Overlay =========================================================================================================== -->
+<div id="overlay" class="fixed bottom-0 top-0 left-0 right-0 bg-black bg-opacity-50 z-50 hidden">
+  <!-- Address Modal =========================================================================================================== -->
+  <div
+    id="address-modal"
+    class="absolute top-0 bottom-0 -left-full right-full flex flex-col justify-between py-7 px-5 rounded-right bg-gray-100 transition-all duration-500"
+  >
+    <div>
+      <div class="flex gap-6 mb-10">
+        <i class="back fa fa-arrow-left fa-2x"></i>
+        <h3 class="text-2xl font-bold">Shipping Address</h3>
+      </div>
+      <div>
+        <form id="address-items"></form>
+        <button class="w-full bg-gray-300 rounded-full font-bold text-xl text-center text-gray-600 p-4 mt-5">Add New Address</button>
+      </div>
+    </div>
+    <button id="apply-address" class="w-full bg-black rounded-full font-bold text-xl text-center text-white p-4 shadow-xl">Apply</button>
+  </div>
+
+  <!-- Shipping Method Modal ====================================================================================================== -->
+  <div
+    id="method-modal"
+    class="absolute top-0 bottom-0 -left-full right-full flex flex-col justify-between py-7 px-5 rounded-right bg-gray-100 transition-all duration-500"
+  >
+    <div>
+      <div class="flex gap-6 mb-10">
+        <i class="back fa fa-arrow-left fa-2x"></i>
+        <h3 class="text-2xl font-bold">Shipping Method</h3>
+      </div>
+      <div>
+        <form id="method-items"></form>
+      </div>
+    </div>
+    <button id="apply-method" class="w-full bg-black rounded-full font-bold text-xl text-center text-white p-4 shadow-xl">Apply</button>
+  </div>
 </div>

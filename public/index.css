@@ -869,6 +869,10 @@ video {
   width: 100%;
 }
 
+.w-40{
+  width: 10rem;
+}
+
 .flex-shrink-0{
   flex-shrink: 0;
 }
@@ -1335,5 +1339,10 @@ button[disabled] {
 
 .rounded-top {
   border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.rounded-right {
+  border-bottom-right-radius: 40px;
   border-top-right-radius: 40px;
 }

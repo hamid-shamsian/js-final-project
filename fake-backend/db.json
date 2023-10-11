@@ -8,28 +8,67 @@
       "avatarURL": "../images/user-1.jpg",
       "addresses": [
         {
+          "id": 1,
           "title": "home",
-          "details": "no2, street9, square1, tehran, iran"
+          "details": "no2, street9, square1, tehran, iran",
+          "active": false
         },
         {
+          "id": 2,
           "title": "work",
-          "details": "no17, street4, square2, tehran, iran"
+          "details": "no17, street4, square2, tehran, iran",
+          "active": false
         },
         {
+          "id": 3,
           "title": "address 3",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": true
         }
       ],
       "cart": [
         {
-          "productId": "11",
-          "size": "39",
+          "productId": "15",
+          "size": "42",
           "color": "Navy",
           "qty": 1,
           "price": "708.00",
-          "id": 1696976738267
+          "id": 1696976738263
+        },
+        {
+          "productId": "46",
+          "size": "38",
+          "color": "Lime",
+          "qty": 3,
+          "price": "392.00",
+          "id": 1697027744061
+        },
+        {
+          "productId": "40",
+          "size": "40",
+          "color": "Olive",
+          "qty": 2,
+          "price": "713.00",
+          "id": 1697027969522
+        },
+        {
+          "productId": "69",
+          "size": "41",
+          "color": "Purple",
+          "qty": 5,
+          "price": "301.00",
+          "id": 1697028124586
+        },
+        {
+          "productId": "51",
+          "size": "41",
+          "color": "Black",
+          "qty": 3,
+          "price": "611.00",
+          "id": 1697028259858
         }
-      ]
+      ],
+      "lastUsedShipMtdId": "2"
     },
     {
       "id": "2",
@@ -39,16 +78,22 @@
       "avatarURL": "../images/user-2.jpg",
       "addresses": [
         {
+          "id": 1,
           "title": "address 1",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": true
         },
         {
+          "id": 2,
           "title": "address 2",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": false
         },
         {
+          "id": 3,
           "title": "address 3",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": false
         }
       ]
     },
@@ -60,16 +105,22 @@
       "avatarURL": "../images/user-3.jpg",
       "addresses": [
         {
+          "id": 1,
           "title": "address 1",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": true
         },
         {
+          "id": 2,
           "title": "address 2",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": false
         },
         {
+          "id": 3,
           "title": "address 3",
-          "details": "no2, street9, square..., city..., state..."
+          "details": "no2, street9, square..., city..., state...",
+          "active": false
         }
       ]
     }
@@ -3274,6 +3325,32 @@
       "price": "437.00",
       "id": "100",
       "brandId": 4
+    }
+  ],
+  "shippingMethods": [
+    {
+      "id": 1,
+      "title": "Economy",
+      "details": "Est. Arrival: 10-20 Days",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "title": "Regular",
+      "details": "Est. Arrival: 5-15 Days",
+      "price": 15
+    },
+    {
+      "id": 3,
+      "title": "Cargo",
+      "details": "Est. Arrival: 5-10 Days",
+      "price": 20
+    },
+    {
+      "id": 4,
+      "title": "Express",
+      "details": "Est. Arrival: 2-4 Days",
+      "price": 30
     }
   ],
   "completedOrders": [],

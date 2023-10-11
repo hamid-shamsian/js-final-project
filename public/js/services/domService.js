@@ -161,3 +161,64 @@ export function prevImage() {
     }, 250);
   }
 }
+// ========================================================================================================================================
+
+export function renderAddressItem({ id, title, details, active }) {
+  document.getElementById("address-items").insertAdjacentHTML(
+    "beforeend",
+    `<label for="address-${id}">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/location.png" alt="decor" class="rounded-full" width="70" />
+          <div>
+            <p class="font-bold text-lg mb-1">${title}</p>
+            <p class="w-48 overflow-hidden whitespace-nowrap overflow-ellipsis">${details}</p>
+          </div>
+        </div>
+        <input id="address-${id}" type="radio" class="accent-black w-5 h-5" name="address" value="${id}" ${active ? "checked" : ""}/>
+      </article>
+    </label>`
+  );
+}
+// ========================================================================================================================================
+
+export function renderMethodItem({ id, title, details, price }, chosenMethodId) {
+  document.getElementById("method-items").insertAdjacentHTML(
+    "beforeend",
+    `<label for="method-${id}">
+      <article class="flex justify-between items-center gap-4 p-5 rounded-3xl bg-white my-5">
+        <div class="flex items-center gap-4">
+          <img src="./images/shipping/${id}.png" alt="decor" class="rounded-full" width="70" />
+          <div>
+            <div class="flex justify-between">
+              <p class="font-bold text-lg mb-1">${title}</p>
+              <span class="font-bold">$${price}</span>
+            </div>  
+            <p class="w-44 overflow-hidden whitespace-nowrap overflow-ellipsis">${details}</p>
+          </div>
+        </div>
+        <input id="method-${id}" type="radio" class="accent-black w-5 h-5" name="method" value="${id}" ${id == chosenMethodId ? "checked" : ""}/>
+      </article>
+    </label>`
+  );
+}
+
+export function renderMethodCard(method) {
+  document.getElementById("shipping-method").innerHTML = method
+    ? `<div class="flex items-center gap-4">
+        <img src="./images/shipping/${method.id}.png" alt="decor" class="rounded-full" width="70" />
+        <div>
+          <div class="flex justify-between">
+            <p class="font-bold text-lg mb-1">${method.title}</p>
+            <span class="font-bold">$${method.price}</span>
+          </div>  
+          <p class="w-44 overflow-hidden whitespace-nowrap overflow-ellipsis">${method.details}</p>
+        </div>
+      </div>`
+    : `<div class="flex items-center gap-4">
+        <i class="fa fa-truck-fast fa-xl"></i>
+        <p class="font-bold text-lg">Choose Shipping Method</p>
+      </div>`;
+
+  document.getElementById("choose-method").className = method ? "fa fa-edit fa-lg" : "fa fa-chevron-right fa-lg";
+}

@@ -3,7 +3,6 @@ import showToast from "./utils/toast.js";
 
 const routes = {
   "/": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
-  "/index.html": { fileName: "onboarding", title: "Shoea | Get inspired and Buy!" },
   "/login": { fileName: "login", title: "Shoea | Login" },
   "/home": { fileName: "home", title: "Shoea | Home" },
   "/brands": { fileName: "brands", title: "Shoea | Brands" },
@@ -28,18 +27,23 @@ export const navigateTo = input => {
 const RenderApp = async notToBePushedPath => {
   spinner.style.display = "";
 
-  const path = notToBePushedPath ?? window.location.pathname;
-  const { fileName, title, noJS } = routes[path] ?? routes[404];
+  const path = notToBePushedPath ?? window.location.pathname; // when notToBePushedPath string is passed to function, then this path is only about to be rendered but the url of the browser is not gonna be changed (for example: loading 404 page when a wrong url is entered by user.)
+  const user = User.get();
 
-  if (fileName == "onboarding" || fileName == "login") {
-    if (User.get()) {
-      showToast("You are already Signed in!");
+  if (path == "/" || path == "/login") {
+    if (user) {
+      showToast("You are already Signed in!"); // redirect signed-in users from onboarding or login pages to home page.
       return navigateTo("/home");
     }
-  } else if (!User.get()) {
-    showToast("Please Sign in first\nto use the App!");
+  } else if (!user) {
+    showToast("Please Sign in first\nto use the App!"); // protect all routes (except onboarding & login) against none-signed-in users.
     return navigateTo("/login");
+  } else if (path == "/checkout" && !user.cart?.length) {
+    showToast("Your Cart is Empty!", "orangered"); // protect checkout page against signed-in users with no cart item.
+    return navigateTo("/home");
   }
+
+  const { title, fileName, noJS } = routes[path] ?? routes[404];
 
   document.title = title;
 

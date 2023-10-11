@@ -9,3 +9,5 @@ export const debounce = (func, delay = 1000) => {
     timeout = setTimeout(func, delay, ...args);
   };
 };
+
+export const formatPrice = price => (price ? "$" + price.toFixed(2) : "-");
