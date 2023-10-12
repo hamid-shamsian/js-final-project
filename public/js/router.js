@@ -12,6 +12,7 @@ const routes = {
   "/checkout": { fileName: "checkout", title: "Shoea | Checkout" },
   "/payment": { fileName: "payment", title: "Shoea | Payment" },
   "/orders": { fileName: "orders", title: "Shoea | Orders" },
+  "/profile": { fileName: "profile", title: "Shoea | Profile" },
   404: { fileName: "404", title: "Shoea | Page Not Found!", noJS: true }
 };
 const spinner = document.getElementById("spinner");
@@ -32,7 +33,7 @@ const RenderApp = async is404 => {
   const path = is404 ? "404" : window.location.pathname; // when a true is404 argument (or any truthy value) is passed to function, then 404 page is only about to be rendered but the url of the browser is not gonna be changed (the url should not change for loading 404 page when a wrong url is entered by user.)
   const user = User.get();
 
-  // Protecting Routs: ==========================
+  // Protecting Routes: =========================
   if (path == "/" || path == "/login") {
     if (user) {
       showToast("You are already Signed in!"); // redirect signed-in users from onboarding or login pages to home page.
