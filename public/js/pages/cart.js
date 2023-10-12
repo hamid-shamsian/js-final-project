@@ -5,7 +5,7 @@ import { renderCartItem } from "../services/domService.js";
 import { debounce } from "../utils/utilityFuncs.js";
 import showToast from "../utils/toast.js";
 
-const { cart, id: userId } = User.get();
+const { cart = [], id: userId } = User.get();
 let richCartItems = null;
 
 const debouncedUpdateCart = debounce(saveUserData, 500);

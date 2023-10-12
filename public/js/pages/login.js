@@ -20,6 +20,7 @@ export function init() {
     password.focus();
     password.type = password.type == "password" ? "text" : "password";
     this.classList.toggle("text-black");
+    this.classList.toggle("text-gray-400");
   });
 
   form.addEventListener("submit", async e => {
@@ -29,7 +30,7 @@ export function init() {
       const user = await authUser(username.value, password.value);
       if (user) {
         User.set(user);
-        showToast("You are successfully Signed in.", "green");
+        showToast("You are successfully Signed in\nHappy Shopping 🛒😍", "green");
         if (document.getElementById("remember").checked) rememberUser(username.value, password.value);
         navigateTo("/home");
       } else {

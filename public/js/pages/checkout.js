@@ -4,6 +4,7 @@ import { getShoe } from "../services/shoeService.js";
 import { getShippingMethods } from "../services/orderService.js";
 import User, { saveUserData } from "../services/userService.js";
 import { formatPrice } from "../utils/utilityFuncs.js";
+import showToast from "../utils/toast.js";
 
 const { id: userId, cart, addresses = [] } = User.get(); // cart does not need default (=[]) value because this page is protected against users with no cart item.
 let { lastUsedShipMtdId } = User.get(); // "let" is used because unlike above values, this value is primitive and might be changed through this page by user.
@@ -24,7 +25,7 @@ export const init = async () => {
 
   richCartItems.forEach(item => renderCartItem("order-list", item, true));
 
-  document.getElementById("products-price").textContent = formatPrice(cart.reduce((sum, item) => item.price * item.qty + sum, 0));
+  document.getElementById("products-price").textContent = formatPrice(getCartAmount());
 
   addresses.forEach((a, i) => renderAddressItem(a, i + 1));
 
@@ -41,6 +42,8 @@ export const init = async () => {
   document.getElementById("apply-method").addEventListener("click", applyMethod);
 
   document.querySelectorAll(".back").forEach(btn => btn.addEventListener("click", closeModal));
+
+  document.getElementById("promo-submit").addEventListener("click", checkPromoCode);
 };
 
 function updateAddressCard() {
@@ -51,7 +54,7 @@ function updateAddressCard() {
 }
 
 function updateMethodData() {
-  const shippingMethod = shippingMethods.find(m => m.id == lastUsedShipMtdId);
+  const shippingMethod = getShippingMethod();
   renderMethodCard(shippingMethod);
   document.getElementById("shipping-price").textContent = formatPrice(shippingMethod?.price);
   updateTotalPrice();
@@ -99,7 +102,29 @@ function applyMethod() {
 }
 
 function updateTotalPrice() {
-  document.getElementById("total-price").textContent = formatPrice(
-    (shippingMethods.find(m => m.id == lastUsedShipMtdId)?.price || 0) + cart.reduce((sum, item) => item.price * item.qty + sum, 0)
-  );
+  document.getElementById("total-price").textContent = formatPrice((getShippingMethod()?.price || 0) + getCartAmount() - getOffPrice());
+}
+
+function checkPromoCode() {
+  if (document.getElementById("promo-code").value == "Hossein") {
+    showToast("Promo Code Submitted.", "green");
+    const promo = document.getElementById("promo-field");
+    promo.style.display = "";
+    promo.children[1].textContent = "-" + formatPrice(getOffPrice());
+    updateTotalPrice();
+  } else {
+    showToast("Wrong Promo Code!", "orangered");
+  }
+}
+
+function getShippingMethod() {
+  return shippingMethods.find(m => m.id == lastUsedShipMtdId);
+}
+
+function getCartAmount() {
+  return cart.reduce((sum, item) => item.price * item.qty + sum, 0);
+}
+
+function getOffPrice() {
+  return 0.3 * ((getShippingMethod()?.price || 0) + getCartAmount());
 }

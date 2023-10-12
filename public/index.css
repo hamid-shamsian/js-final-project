@@ -729,6 +729,10 @@ video {
   margin-left: 1rem;
 }
 
+.ml-5{
+  margin-left: 1.25rem;
+}
+
 .mr-3{
   margin-right: 0.75rem;
 }
@@ -855,6 +859,10 @@ video {
 
 .w-28{
   width: 7rem;
+}
+
+.w-3\/5{
+  width: 60%;
 }
 
 .w-36{
@@ -1185,6 +1193,10 @@ video {
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pt-96{
+  padding-top: 24rem;
 }
 
 .text-center{

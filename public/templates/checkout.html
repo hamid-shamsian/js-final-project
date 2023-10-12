@@ -34,9 +34,9 @@
 
   <h2 class="pt-8 text-xl font-bold">Promo Code</h2>
   <div class="flex gap-5 items-center">
-    <input type="text" placeholder="Enter Promo Code" class="bg-gray-200 rounded-3xl px-4 py-4 text-lg w-full my-5" />
+    <input id="promo-code" type="text" placeholder="Enter Promo Code" class="bg-gray-200 rounded-3xl px-4 py-4 text-lg w-full my-5" />
     <button class="rounded-full flex justify-center items-center bg-black text-white p-5">
-      <i class="fa fa-plus"></i>
+      <i id="promo-submit" class="fa fa-plus"></i>
     </button>
   </div>
 
@@ -49,9 +49,9 @@
       <span>Shipping</span>
       <span id="shipping-price" class="font-bold"></span>
     </div>
-    <div class="flex justify-between items-center my-5" style="display: none">
+    <div id="promo-field" class="flex justify-between items-center my-5" style="display: none">
       <span>Promo</span>
-      <span id="off-price" class="font-bold"></span>
+      <span class="font-bold"></span>
     </div>
     <hr />
     <div class="flex justify-between items-center my-5">

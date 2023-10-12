@@ -61,13 +61,12 @@ function changeQty(e) {
 
 async function addToCart() {
   const { id, cart = [] } = User.get();
-  // console.log(order, cart);
 
   if (cart.find(i => i.productId == data.productId && i.color == data.color && i.size == data.size))
     return showToast("This Product is already added to your Cart!", "orangered");
 
   data.id = Date.now();
-  cart.push(data);
+  cart.push({ ...data }); // remember data is object and pushing itself (without making copy of) to cart will lead to unwanted "already added..." message :)
 
   try {
     await saveUserData(id, { cart });
